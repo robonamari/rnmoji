@@ -23,5 +23,3 @@ function rnmoji_uninstall(): void
         rmdir($plugin_dir);
     }
 }
-
-?>
