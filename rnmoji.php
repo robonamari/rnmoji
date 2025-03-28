@@ -10,6 +10,14 @@ Author URI: https://robonamari.com
 License: MIT
 Text Domain: rnmoji
 */
+
+// Exit if accessed directly
+if (!defined('ABSPATH')) {
+    exit;
+}
+
+
+
 define('RNMOJI_UPLOAD_DIR', WP_CONTENT_DIR . '/uploads/rnmoji/');
 define('RNMOJI_UPLOAD_URL', content_url('/uploads/rnmoji/'));
 

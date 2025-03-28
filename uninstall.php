@@ -1,19 +1,27 @@
 <?php
-declare(strict_types=1);
-
-register_uninstall_hook(__FILE__, "rnmoji_uninstall");
+// Exit if accessed directly.
+defined("WP_UNINSTALL_PLUGIN") || exit();
 
 function rnmoji_uninstall(): void
 {
     $plugin_dir = plugin_dir_path(__FILE__);
 
     if (is_dir($plugin_dir)) {
-        foreach (glob($plugin_dir . "*") as $file) {
-            if (is_file($file) || is_link($file)) {
-                unlink($file);
-            }
+        $files = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator(
+                $plugin_dir,
+                RecursiveDirectoryIterator::SKIP_DOTS
+            ),
+            RecursiveIteratorIterator::CHILD_FIRST
+        );
+
+        foreach ($files as $fileinfo) {
+            $todo = $fileinfo->isDir() ? "rmdir" : "unlink";
+            $todo($fileinfo->getRealPath());
         }
+
         rmdir($plugin_dir);
     }
 }
+
 ?>
