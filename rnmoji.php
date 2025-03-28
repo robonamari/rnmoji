@@ -12,54 +12,63 @@ Text Domain: rnmoji
 */
 
 // Exit if accessed directly
-if (!defined('ABSPATH')) {
-    exit;
+if (!defined("ABSPATH")) {
+    exit();
 }
 
+define("RNMOJI_UPLOAD_DIR", WP_CONTENT_DIR . "/uploads/rnmoji/");
+define("RNMOJI_UPLOAD_URL", content_url("/uploads/rnmoji/"));
 
-
-define('RNMOJI_UPLOAD_DIR', WP_CONTENT_DIR . '/uploads/rnmoji/');
-define('RNMOJI_UPLOAD_URL', content_url('/uploads/rnmoji/'));
-
-function rnmoji_plugin_action_links(array $links, string $file): array {
+function rnmoji_plugin_action_links(array $links, string $file): array
+{
     if ($file === plugin_basename(__FILE__)) {
-        $settings_link = '<a href="' . admin_url('plugins.php?page=rnmoji-settings') . '">تنظیمات</a>';
+        $settings_link =
+            '<a href="' .
+            admin_url("plugins.php?page=rnmoji-settings") .
+            '">تنظیمات</a>';
         array_unshift($links, $settings_link);
     }
     return $links;
 }
-add_filter('plugin_action_links', 'rnmoji_plugin_action_links', 10, 2);
+add_filter("plugin_action_links", "rnmoji_plugin_action_links", 10, 2);
 
-function rnmoji_add_plugin_settings_page(): void {
+function rnmoji_add_plugin_settings_page(): void
+{
     add_submenu_page(
         null,
-        'تنظیمات افزونه rnmoji',
-        'رن موجی',
-        'manage_options',
-        'rnmoji-settings',
-        'rnmoji_settings_page'
+        "تنظیمات افزونه rnmoji",
+        "رن موجی",
+        "manage_options",
+        "rnmoji-settings",
+        "rnmoji_settings_page"
     );
 }
-add_action('admin_menu', 'rnmoji_add_plugin_settings_page');
+add_action("admin_menu", "rnmoji_add_plugin_settings_page");
 
-function rnmoji_settings_page(): void {
+function rnmoji_settings_page(): void
+{
     if (!file_exists(RNMOJI_UPLOAD_DIR)) {
         mkdir(RNMOJI_UPLOAD_DIR, 0777, true);
     }
 
-    if (isset($_POST['upload_emoji']) && !empty($_FILES['emoji_file']['name'])) {
-        $file = $_FILES['emoji_file'];
-        $target_path = RNMOJI_UPLOAD_DIR . basename($file['name']);
-        $emoji_name = pathinfo($file['name'], PATHINFO_FILENAME);
+    if (
+        isset($_POST["upload_emoji"]) &&
+        !empty($_FILES["emoji_file"]["name"])
+    ) {
+        $file = $_FILES["emoji_file"];
+        $target_path = RNMOJI_UPLOAD_DIR . basename($file["name"]);
+        $emoji_name = pathinfo($file["name"], PATHINFO_FILENAME);
 
         if (file_exists($target_path)) {
             echo '<div class="error"><p>نام فایل تکراری است. ایموجی آپلود نشد.</p></div>';
         } else {
-            $uploaded_image = imagecreatefromstring(file_get_contents($file['tmp_name']));
+            $uploaded_image = imagecreatefromstring(
+                file_get_contents($file["tmp_name"])
+            );
 
             if ($uploaded_image !== false) {
                 $resized_image = imagescale($uploaded_image, 64, 64);
-                $webp_path = RNMOJI_UPLOAD_DIR . $emoji_name . '.webp';
+                $webp_path = RNMOJI_UPLOAD_DIR . $emoji_name . ".webp";
 
                 if (imagewebp($resized_image, $webp_path)) {
                     imagedestroy($resized_image);
@@ -74,27 +83,29 @@ function rnmoji_settings_page(): void {
         }
     }
 
-    if (isset($_POST['backup_emoji'])) {
+    if (isset($_POST["backup_emoji"])) {
         $zip = new ZipArchive();
-        $backup_file = RNMOJI_UPLOAD_DIR . 'emoji-backup.zip';
-        if ($zip->open($backup_file, ZipArchive::CREATE) === TRUE) {
+        $backup_file = RNMOJI_UPLOAD_DIR . "emoji-backup.zip";
+        if ($zip->open($backup_file, ZipArchive::CREATE) === true) {
             $files = scandir(RNMOJI_UPLOAD_DIR);
             foreach ($files as $file) {
-                if ($file !== '.' && $file !== '..') {
+                if ($file !== "." && $file !== "..") {
                     $zip->addFile(RNMOJI_UPLOAD_DIR . $file, $file);
                 }
             }
             $zip->close();
-            echo '<div class="updated"><p>بکاپ با موفقیت تهیه شد. <a href="' . content_url('/uploads/rnmoji/emoji-backup.zip') . '">دانلود بکاپ</a></p></div>';
+            echo '<div class="updated"><p>بکاپ با موفقیت تهیه شد. <a href="' .
+                content_url("/uploads/rnmoji/emoji-backup.zip") .
+                '">دانلود بکاپ</a></p></div>';
         } else {
             echo '<div class="error"><p>خطا در ایجاد بکاپ.</p></div>';
         }
     }
 
-    if (isset($_POST['upload_backup'])) {
-        $uploaded_backup = $_FILES['backup_file'];
+    if (isset($_POST["upload_backup"])) {
+        $uploaded_backup = $_FILES["backup_file"];
         $zip = new ZipArchive();
-        if ($zip->open($uploaded_backup['tmp_name'])) {
+        if ($zip->open($uploaded_backup["tmp_name"])) {
             $zip->extractTo(RNMOJI_UPLOAD_DIR);
             $zip->close();
             echo '<div class="updated"><p>بکاپ با موفقیت بارگذاری شد.</p></div>';
@@ -103,11 +114,19 @@ function rnmoji_settings_page(): void {
         }
     }
 
-    if (isset($_POST['rename_emoji']) && !empty($_POST['emoji_name']) && isset($_POST['old_emoji'])) {
-        $old_emoji = $_POST['old_emoji'];
-        $new_name = sanitize_text_field($_POST['emoji_name']);
+    if (
+        isset($_POST["rename_emoji"]) &&
+        !empty($_POST["emoji_name"]) &&
+        isset($_POST["old_emoji"])
+    ) {
+        $old_emoji = $_POST["old_emoji"];
+        $new_name = sanitize_text_field($_POST["emoji_name"]);
         $old_path = RNMOJI_UPLOAD_DIR . $old_emoji;
-        $new_path = RNMOJI_UPLOAD_DIR . $new_name . '.' . pathinfo($old_emoji, PATHINFO_EXTENSION);
+        $new_path =
+            RNMOJI_UPLOAD_DIR .
+            $new_name .
+            "." .
+            pathinfo($old_emoji, PATHINFO_EXTENSION);
 
         if (rename($old_path, $new_path)) {
             echo '<div class="updated"><p>ایموجی با موفقیت تغییر نام یافت.</p></div>';
@@ -148,7 +167,8 @@ function rnmoji_settings_page(): void {
         <?php
         $index = 1;
         foreach ($emoji_files as $file) {
-            if ($file !== '.' && $file !== '..') {
+            if ($file !== "." && $file !== "..") {
+
                 $emoji_name = pathinfo($file, PATHINFO_FILENAME);
                 $emoji_url = RNMOJI_UPLOAD_URL . $file;
                 ?>
@@ -163,13 +183,15 @@ function rnmoji_settings_page(): void {
                         </form>
                     </td>
                     <td>
-                        <a href="<?= admin_url('admin-post.php?action=delete_emoji&file=' . urlencode($file)) ?>" class="button button-secondary">حذف</a>
+                        <a href="<?= admin_url(
+                            "admin-post.php?action=delete_emoji&file=" .
+                                urlencode($file)
+                        ) ?>" class="button button-secondary">حذف</a>
                     </td>
                 </tr>
                 <?php
             }
-        }
-        ?>
+        }?>
         </tbody>
     </table>
 </div>
@@ -177,32 +199,29 @@ function rnmoji_settings_page(): void {
     <?php
 }
 
-function rnmoji_delete_emoji(): void {
-    if (isset($_GET['file'])) {
-        $file = urldecode($_GET['file']);
-        $file_path = RNMOJI_UPLOAD_DIR . $file;
-        if (file_exists($file_path)) {
-            unlink($file_path);
-            wp_redirect(admin_url('plugins.php?page=rnmoji-settings'));
-            exit;
-        }
-    }
-}
-add_action('admin_post_delete_emoji', 'rnmoji_delete_emoji');
-
-add_filter('comment_text', function($comment_text) {
-    $emoji_dir = get_site_url() . '/wp-content/uploads/rnmoji';
-    $emoji_path = WP_CONTENT_DIR . '/uploads/rnmoji';
-    $files = scandir($emoji_path);
+add_filter("comment_text", function ($comment_text) {
+    $emoji_dir = get_site_url() . "/wp-content/uploads/rnmoji";
+    $files = scandir(RNMOJI_UPLOAD_DIR);
     $emojis = [];
 
     foreach ($files as $file) {
         $extension = pathinfo($file, PATHINFO_EXTENSION);
         if ($extension) {
-            $emoji_name = ':' . pathinfo($file, PATHINFO_FILENAME) . ':';
-            $emojis[$emoji_name] = '<img src="' . $emoji_dir . '/' . $file . '" alt="' . $emoji_name . '" style="width: 25px; height: 25px;" />';
+            $emoji_name = ":" . pathinfo($file, PATHINFO_FILENAME) . ":";
+            $emojis[$emoji_name] =
+                '<img src="' .
+                $emoji_dir .
+                "/" .
+                $file .
+                '" alt="' .
+                $emoji_name .
+                '" style="width: 25px; height: 25px;" />';
         }
     }
-    return str_replace(array_keys($emojis), array_values($emojis), $comment_text);
+    return str_replace(
+        array_keys($emojis),
+        array_values($emojis),
+        $comment_text
+    );
 });
 ?>
