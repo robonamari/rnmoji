@@ -43,8 +43,6 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: "8.3"
-      - name: Install dependencies
-        run: sudo apt-get install -y --fix-missing php8.3-cli php8.3-mbstring php8.3-xml
       - name: Check PHP compatibility by running code
         run: find . -name "*.php" -exec php -l {} \;
 
