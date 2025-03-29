@@ -2,7 +2,7 @@
 /*
 Plugin Name: rnmoji
 Plugin URI: https://github.com/robonamari/rnmoji
-Description: Add custom emojis to WordPress comment sections with Ren Moji, allowing users to express themselves with fun and unique emoji reactions.
+Description: Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions.
 Version: 1.0.0
 Requires PHP: 7.4
 Author: robonamari
@@ -27,7 +27,7 @@ function rnmoji_plugin_action_links(array $links, string $file): array
         $settings_link =
             '<a href="' .
             admin_url("plugins.php?page=rnmoji-settings") .
-            '">تنظیمات</a>';
+            '">Settings</a>';
         array_unshift($links, $settings_link);
     }
     return $links;
@@ -38,8 +38,8 @@ function rnmoji_add_plugin_settings_page(): void
 {
     add_submenu_page(
         null,
-        "تنظیمات افزونه rnmoji",
-        "رن موجی",
+        "Plugin Settings rnmoji",
+        "rnmoji",
         "manage_options",
         "rnmoji-settings",
         "rnmoji_settings_page"
