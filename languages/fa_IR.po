@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "Plugin Settings"
+msgstr "تنظیمات افزونه"
+
+msgid "Upload New Emoji"
+msgstr "آپلود ایموجی جدید"
+
+msgid "Upload Emoji"
+msgstr "آپلود ایموجی"
+
+msgid "Backup"
+msgstr "پشتیبان‌گیری"
+
+msgid "Create Backup"
+msgstr "ایجاد پشتیبان"
+
+msgid "Upload Backup"
+msgstr "آپلود پشتیبان"
+
+msgid "Uploaded Emojis"
+msgstr "ایموجی‌های آپلود شده"
+
+msgid "Emoji Image"
+msgstr "تصویر ایموجی"
+
+msgid "Emoji Name"
+msgstr "نام ایموجی"
+
+msgid "Actions"
+msgstr "عملیات"
+
+msgid "Rename"
+msgstr "تغییر نام"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "File name is already taken. Emoji not uploaded."
+msgstr "نام فایل قبلاً استفاده شده است. ایموجی آپلود نشد."
+
+msgid "Emoji uploaded and resized successfully."
+msgstr "ایموجی با موفقیت آپلود و اندازه‌گذاری شد."
+
+msgid "Error converting image to WebP."
+msgstr "خطا در تبدیل تصویر به WebP."
+
+msgid "Error loading image."
+msgstr "خطا در بارگذاری تصویر."
+
+msgid "Backup created successfully."
+msgstr "پشتیبان با موفقیت ایجاد شد."
+
+msgid "Download Backup"
+msgstr "دانلود پشتیبان"
+
+msgid "Error creating backup."
+msgstr "خطا در ایجاد پشتیبان."
+
+msgid "Backup uploaded successfully."
+msgstr "پشتیبان با موفقیت آپلود شد."
+
+msgid "Error uploading backup file."
+msgstr "خطا در آپلود فایل پشتیبان."
+
+msgid "Emoji renamed successfully."
+msgstr "ایموجی با موفقیت تغییر نام یافت."
+
+msgid "Error renaming emoji."
+msgstr "خطا در تغییر نام ایموجی."
+
+msgid "Unauthorized access."
+msgstr "دسترسی غیرمجاز."
+
+msgid "File not found."
+msgstr "فایل پیدا نشد."
+
+msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
+msgstr "ایموجی‌های سفارشی را به بخش‌های نظرات وردپرس با rnmoji اضافه کنید تا کاربران بتوانند با واکنش‌های ایموجی جالب و منحصر به فرد خود را ابراز کنند."
+
+msgid "Settings"
+msgstr "تنظیمات"
+
+msgid "Plugin Settings rnmoji"
+msgstr "تنظیمات افزونه rnmoji"
+
+msgid "rnmoji"
+msgstr "rnmoji"

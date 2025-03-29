@@ -1,0 +1,86 @@
+msgid "Plugin Settings"
+msgstr ""
+
+msgid "Upload New Emoji"
+msgstr ""
+
+msgid "Upload Emoji"
+msgstr ""
+
+msgid "Backup"
+msgstr ""
+
+msgid "Create Backup"
+msgstr ""
+
+msgid "Upload Backup"
+msgstr ""
+
+msgid "Uploaded Emojis"
+msgstr ""
+
+msgid "Emoji Image"
+msgstr ""
+
+msgid "Emoji Name"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Rename"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "File name is already taken. Emoji not uploaded."
+msgstr ""
+
+msgid "Emoji uploaded and resized successfully."
+msgstr ""
+
+msgid "Error converting image to WebP."
+msgstr ""
+
+msgid "Error loading image."
+msgstr ""
+
+msgid "Backup created successfully. "
+msgstr ""
+
+msgid "Download Backup"
+msgstr ""
+
+msgid "Error creating backup."
+msgstr ""
+
+msgid "Backup uploaded successfully."
+msgstr ""
+
+msgid "Error uploading backup file."
+msgstr ""
+
+msgid "Emoji renamed successfully."
+msgstr ""
+
+msgid "Error renaming emoji."
+msgstr ""
+
+msgid "Unauthorized access."
+msgstr ""
+
+msgid "File not found."
+msgstr ""
+
+msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Plugin Settings rnmoji"
+msgstr ""
+
+msgid "rnmoji"
+msgstr ""

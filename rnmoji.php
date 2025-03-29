@@ -9,6 +9,7 @@ Author: robonamari
 Author URI: https://robonamari.com
 License: MIT
 Text Domain: rnmoji
+Domain Path: /languages
 */
 
 // Exit if accessed directly
@@ -21,13 +22,25 @@ define("RNMOJI_UPLOAD_URL", plugin_dir_url(__FILE__) . "uploads/");
 
 require_once plugin_dir_path(__FILE__) . "rnmoji-functions.php";
 
+function rnmoji_load_textdomain()
+{
+    load_plugin_textdomain(
+        "rnmoji",
+        false,
+        dirname(plugin_basename(__FILE__)) . "/languages/"
+    );
+}
+add_action("plugins_loaded", "rnmoji_load_textdomain");
+
 function rnmoji_plugin_action_links(array $links, string $file): array
 {
     if ($file === plugin_basename(__FILE__)) {
         $settings_link =
             '<a href="' .
             admin_url("plugins.php?page=rnmoji-settings") .
-            '">Settings</a>';
+            '">' .
+            __("Settings", "rnmoji") .
+            "</a>";
         array_unshift($links, $settings_link);
     }
     return $links;
@@ -38,8 +51,8 @@ function rnmoji_add_plugin_settings_page(): void
 {
     add_submenu_page(
         null,
-        "Plugin Settings rnmoji",
-        "rnmoji",
+        __("Plugin Settings rnmoji", "rnmoji"),
+        __("rnmoji", "rnmoji"),
         "manage_options",
         "rnmoji-settings",
         "rnmoji_settings_page"
