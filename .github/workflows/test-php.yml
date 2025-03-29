@@ -55,7 +55,5 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: "8.4"
-      - name: Install dependencies
-        run: sudo apt-get install -y php8.4-cli php8.4-mbstring php8.4-xml
       - name: Check PHP compatibility by running code
         run: find . -name "*.php" -exec php -l {} \;
