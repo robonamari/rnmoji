@@ -24,10 +24,10 @@ jobs:
         run: echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
 
       - name: Create zip archive
-        run: zip -r "rnmoji-${TAG_NAME}.zip" . -x ".github/*" ".git/*" "README.md" "SECURITY.md"
+        run: zip -r "rnmoji-${TAG_NAME}.zip" . -x ".github/*" ".git/*" "README.md" "SECURITY.md"  "languages/*.po"
 
       - name: Create tar.gz archive
-        run: tar --exclude=.github --exclude=.git --exclude=README.md --exclude=SECURITY.md --exclude="rnmoji-${TAG_NAME}.zip" --ignore-failed-read -czf "rnmoji-${TAG_NAME}.tar.gz" .
+        run: tar --exclude=.github --exclude=.git --exclude=README.md --exclude=SECURITY.md --exclude=languages/*.po --exclude="rnmoji-${TAG_NAME}.zip" --ignore-failed-read -czf "rnmoji-${TAG_NAME}.tar.gz" .
 
       - name: Upload Release
         uses: softprops/action-gh-release@v2
