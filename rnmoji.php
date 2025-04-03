@@ -28,7 +28,8 @@ require_once __DIR__ . "/rnmoji-functions.php";
  *
  * @return void
  */
-function rnmoji_load_textdomain(): void {
+function rnmoji_load_textdomain(): void
+{
     load_plugin_textdomain(
         "rnmoji",
         false,
@@ -43,7 +44,8 @@ add_action("plugins_loaded", "rnmoji_load_textdomain");
  * @param array $links Existing plugin action links.
  * @return array Modified plugin action links.
  */
-function rnmoji_plugin_action_links(array $links): array {
+function rnmoji_plugin_action_links(array $links): array
+{
     $settings_link = sprintf(
         '<a href="%s">%s</a>',
         esc_url(admin_url("admin.php?page=rnmoji-settings")),
@@ -52,14 +54,18 @@ function rnmoji_plugin_action_links(array $links): array {
     array_unshift($links, $settings_link);
     return $links;
 }
-add_filter("plugin_action_links_" . plugin_basename(__FILE__), "rnmoji_plugin_action_links");
+add_filter(
+    "plugin_action_links_" . plugin_basename(__FILE__),
+    "rnmoji_plugin_action_links"
+);
 
 /**
  * Add submenu page for plugin settings.
  *
  * @return void
  */
-function rnmoji_add_plugin_settings_page(): void {
+function rnmoji_add_plugin_settings_page(): void
+{
     add_submenu_page(
         null,
         esc_html__("Plugin Settings rnmoji", "rnmoji"),
