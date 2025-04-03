@@ -1,7 +1,24 @@
 <?php
+/**
+ * Uninstall script for the rnmoji plugin.
+ *
+ * This script removes all plugin-related files and directories upon uninstallation.
+ *
+ * @package rnmoji
+ */
+
+declare(strict_types=1);
+
 // Exit if accessed directly.
 defined("WP_UNINSTALL_PLUGIN") || exit();
 
+/**
+ * Handles the uninstallation process of the rnmoji plugin.
+ *
+ * Deletes all files and directories associated with the plugin.
+ *
+ * @return void
+ */
 function rnmoji_uninstall(): void
 {
     $plugin_dir = plugin_dir_path(__FILE__);
@@ -16,10 +33,12 @@ function rnmoji_uninstall(): void
         );
 
         foreach ($files as $fileinfo) {
-            $todo = $fileinfo->isDir() ? "rmdir" : "unlink";
-            $todo($fileinfo->getRealPath());
+            $action = $fileinfo->isDir() ? "rmdir" : "unlink";
+            $action($fileinfo->getRealPath());
         }
 
         rmdir($plugin_dir);
     }
 }
+
+rnmoji_uninstall();
