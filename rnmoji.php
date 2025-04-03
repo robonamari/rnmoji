@@ -4,7 +4,7 @@ Plugin Name: rnmoji
 Plugin URI: https://github.com/robonamari/rnmoji
 Description: Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions.
 Version: 1.0.0
-Requires PHP: 7.4
+Requires PHP: 8.1
 Author: robonamari
 Author URI: https://robonamari.com
 License: MIT
@@ -12,7 +12,8 @@ Text Domain: rnmoji
 Domain Path: /languages
 */
 
-// Exit if accessed directly
+declare(strict_types=1);
+
 if (!defined("ABSPATH")) {
     exit();
 }
@@ -20,10 +21,14 @@ if (!defined("ABSPATH")) {
 define("RNMOJI_UPLOAD_DIR", plugin_dir_path(__FILE__) . "uploads/");
 define("RNMOJI_UPLOAD_URL", plugin_dir_url(__FILE__) . "uploads/");
 
-require_once plugin_dir_path(__FILE__) . "rnmoji-functions.php";
+require_once __DIR__ . "/rnmoji-functions.php";
 
-function rnmoji_load_textdomain()
-{
+/**
+ * Load plugin text domain for translations.
+ *
+ * @return void
+ */
+function rnmoji_load_textdomain(): void {
     load_plugin_textdomain(
         "rnmoji",
         false,
@@ -32,30 +37,45 @@ function rnmoji_load_textdomain()
 }
 add_action("plugins_loaded", "rnmoji_load_textdomain");
 
-function rnmoji_plugin_action_links(array $links, string $file): array
-{
-    if ($file === plugin_basename(__FILE__)) {
-        $settings_link =
-            '<a href="' .
-            admin_url("plugins.php?page=rnmoji-settings") .
-            '">' .
-            __("Settings", "rnmoji") .
-            "</a>";
-        array_unshift($links, $settings_link);
-    }
+/**
+ * Add settings link to the plugin actions.
+ *
+ * @param array $links Existing plugin action links.
+ * @return array Modified plugin action links.
+ */
+function rnmoji_plugin_action_links(array $links): array {
+    $settings_link = sprintf(
+        '<a href="%s">%s</a>',
+        esc_url(admin_url("admin.php?page=rnmoji-settings")),
+        esc_html__("Settings", "rnmoji")
+    );
+    array_unshift($links, $settings_link);
     return $links;
 }
-add_filter("plugin_action_links", "rnmoji_plugin_action_links", 10, 2);
+add_filter("plugin_action_links_" . plugin_basename(__FILE__), "rnmoji_plugin_action_links");
 
-function rnmoji_add_plugin_settings_page(): void
-{
+/**
+ * Add submenu page for plugin settings.
+ *
+ * @return void
+ */
+function rnmoji_add_plugin_settings_page(): void {
     add_submenu_page(
         null,
-        __("Plugin Settings rnmoji", "rnmoji"),
-        __("rnmoji", "rnmoji"),
+        esc_html__("Plugin Settings rnmoji", "rnmoji"),
+        esc_html__("rnmoji", "rnmoji"),
         "manage_options",
         "rnmoji-settings",
         "rnmoji_settings_page"
     );
 }
 add_action("admin_menu", "rnmoji_add_plugin_settings_page");
+
+/**
+ * Display the plugin settings page.
+ *
+ * @return void
+ */
+function rnmoji_settings_page(): void {
+    echo "<div class='wrap'><h1>" . esc_html__("rnmoji Settings", "rnmoji") . "</h1></div>";
+}
