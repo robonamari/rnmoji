@@ -1,15 +1,15 @@
 <?php
 /**
- * Plugin Name: rnmoji
- * Plugin URI: https://github.com/robonamari/rnmoji
- * Description: Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions.
- * Version: 1.0.0
+ * Plugin Name:  rnmoji
+ * Plugin URI:   https://github.com/robonamari/rnmoji
+ * Description:  Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions.
+ * Version:      1.0.0
  * Requires PHP: 8.1
- * Author: robonamari
- * Author URI: https://robonamari.com
- * License: MIT
- * Text Domain: rnmoji
- * Domain Path: /languages
+ * Author:       robonamari
+ * Author URI:   https://robonamari.com
+ * License:      MIT
+ * Text Domain:  rnmoji
+ * Domain Path:  /languages
  */
 
 declare(strict_types=1);
