@@ -164,7 +164,7 @@ function create_backup(): void
         }
 
         $zip->close();
-        echo '<div class="updated"><p>' . __("Backup created successfully. ", "rnmoji") . '<a href="' . plugin_dir_url(__FILE__) . "emoji-backup.zip" . '">' . __("Download Backup", "rnmoji") . "</a></p></div>";
+        echo '<div class="updated"><p>' . __("Backup created successfully.", "rnmoji") . '<a href="' . plugin_dir_url(__FILE__) . "emoji-backup.zip" . '">' . __("Download Backup", "rnmoji") . "</a></p></div>";
     } else {
         echo '<div class="error"><p>' . __("Error creating backup.", "rnmoji") . "</p></div>";
     }

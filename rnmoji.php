@@ -24,6 +24,20 @@ define("RNMOJI_UPLOAD_URL", plugin_dir_url(__FILE__) . "uploads/");
 require_once __DIR__ . "/rnmoji-functions.php";
 
 /**
+ * Load plugin text domain for translations.
+ *
+ * @return void
+ */
+function rnmoji_load_textdomain(): void {
+    load_plugin_textdomain(
+        "rnmoji",
+        false,
+        dirname(plugin_basename(__FILE__)) . "/languages/"
+    );
+}
+add_action("plugins_loaded", "rnmoji_load_textdomain");
+
+/**
  * Add settings link to the plugin actions.
  *
  * @param array $links Existing plugin action links.
