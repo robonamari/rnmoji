@@ -85,5 +85,3 @@ msgstr ""
 msgid "rnmoji"
 msgstr ""
 
-msgid "rnmoji Settings"
-msgstr ""

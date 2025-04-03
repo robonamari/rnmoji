@@ -1,6 +1,16 @@
 #
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
 
 msgid "Plugin Settings"
 msgstr "تنظیمات افزونه"
@@ -50,8 +60,13 @@ msgstr "خطا در تبدیل تصویر به WebP."
 msgid "Error loading image."
 msgstr "خطا در بارگذاری تصویر."
 
+#, fuzzy
 msgid "Backup created successfully."
-msgstr "پشتیبان با موفقیت ایجاد شد."
+msgstr ""
+"#-#-#-#-#  catalog.po  #-#-#-#-#\n"
+"پشتیبان با موفقیت ایجاد شد.\n"
+"#-#-#-#-#  catalog.po  #-#-#-#-#\n"
+"پشتیبان‌گیری با موفقیت انجام شد."
 
 msgid "Download Backup"
 msgstr "دانلود پشتیبان"
@@ -93,8 +108,8 @@ msgstr "تنظیمات افزونه rnmoji"
 msgid "rnmoji"
 msgstr "rnmoji"
 
-msgid "Backup created successfully."
-msgstr "پشتیبان‌گیری با موفقیت انجام شد."
-
 msgid "rnmoji Settings"
 msgstr "تنظیمات rnmoji"
+
+msgid "Backup created successfully. "
+msgstr ""
