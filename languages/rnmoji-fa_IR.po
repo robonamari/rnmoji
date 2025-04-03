@@ -3,88 +3,88 @@ msgid ""
 msgstr ""
 
 msgid "Plugin Settings"
-msgstr ""
+msgstr "تنظیمات افزونه"
 
 msgid "Upload New Emoji"
-msgstr ""
+msgstr "آپلود ایموجی جدید"
 
 msgid "Upload Emoji"
-msgstr ""
+msgstr "آپلود ایموجی"
 
 msgid "Backup"
-msgstr ""
+msgstr "پشتیبان‌گیری"
 
 msgid "Create Backup"
-msgstr ""
+msgstr "ایجاد پشتیبان"
 
 msgid "Upload Backup"
-msgstr ""
+msgstr "آپلود پشتیبان"
 
 msgid "Uploaded Emojis"
-msgstr ""
+msgstr "ایموجی‌های آپلود شده"
 
 msgid "Emoji Image"
-msgstr ""
+msgstr "تصویر ایموجی"
 
 msgid "Emoji Name"
-msgstr ""
+msgstr "نام ایموجی"
 
 msgid "Actions"
-msgstr ""
+msgstr "اقدامات"
 
 msgid "Rename"
-msgstr ""
+msgstr "تغییر نام"
 
 msgid "Delete"
-msgstr ""
+msgstr "حذف"
 
 msgid "File name is already taken. Emoji not uploaded."
-msgstr ""
+msgstr "نام فایل قبلاً گرفته شده است. ایموجی آپلود نشد."
 
 msgid "Emoji uploaded and resized successfully."
-msgstr ""
+msgstr "ایموجی با موفقیت آپلود و تغییر اندازه شد."
 
 msgid "Error converting image to WebP."
-msgstr ""
+msgstr "خطا در تبدیل تصویر به WebP."
 
 msgid "Error loading image."
-msgstr ""
+msgstr "خطا در بارگذاری تصویر."
 
 msgid "Backup created successfully."
-msgstr ""
+msgstr "پشتیبان با موفقیت ایجاد شد."
 
 msgid "Download Backup"
-msgstr ""
+msgstr "دانلود پشتیبان"
 
 msgid "Error creating backup."
-msgstr ""
+msgstr "خطا در ایجاد پشتیبان."
 
 msgid "Backup uploaded successfully."
-msgstr ""
+msgstr "پشتیبان با موفقیت آپلود شد."
 
 msgid "Error uploading backup file."
-msgstr ""
+msgstr "خطا در آپلود فایل پشتیبان."
 
 msgid "Emoji renamed successfully."
-msgstr ""
+msgstr "ایموجی با موفقیت تغییر نام داد."
 
 msgid "Error renaming emoji."
-msgstr ""
+msgstr "خطا در تغییر نام ایموجی."
 
 msgid "Unauthorized access."
-msgstr ""
+msgstr "دسترسی غیرمجاز."
 
 msgid "File not found."
-msgstr ""
+msgstr "فایل پیدا نشد."
 
 msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
-msgstr ""
+msgstr "با استفاده از rnmoji ایموجی‌های سفارشی را به بخش‌های نظرات وردپرس اضافه کنید تا کاربران بتوانند خود را با واکنش‌های ایموجی منحصر به فرد و جالب ابراز کنند."
 
 msgid "Settings"
-msgstr ""
+msgstr "تنظیمات"
 
 msgid "Plugin Settings rnmoji"
-msgstr ""
+msgstr "تنظیمات افزونه rnmoji"
 
 msgid "rnmoji"
-msgstr ""
+msgstr "rnmoji"
