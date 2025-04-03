@@ -1,3 +1,7 @@
+#
+msgid ""
+msgstr ""
+
 msgid "Plugin Settings"
 msgstr "تنظیمات افزونه"
 
@@ -73,8 +77,12 @@ msgstr "دسترسی غیرمجاز."
 msgid "File not found."
 msgstr "فایل پیدا نشد."
 
-msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
-msgstr "ایموجی‌های سفارشی را به بخش‌های نظرات وردپرس با rnmoji اضافه کنید تا کاربران بتوانند با واکنش‌های ایموجی جالب و منحصر به فرد خود را ابراز کنند."
+msgid ""
+"Add custom emojis to WordPress comment sections with rnmoji, allowing users "
+"to express themselves with fun and unique emoji reactions."
+msgstr ""
+"ایموجی‌های سفارشی را به بخش‌های نظرات وردپرس با rnmoji اضافه کنید تا کاربران"
+" بتوانند با واکنش‌های ایموجی جالب و منحصر به فرد خود را ابراز کنند."
 
 msgid "Settings"
 msgstr "تنظیمات"
@@ -84,3 +92,9 @@ msgstr "تنظیمات افزونه rnmoji"
 
 msgid "rnmoji"
 msgstr "rnmoji"
+
+msgid "Backup created successfully."
+msgstr "پشتیبان‌گیری با موفقیت انجام شد."
+
+msgid "rnmoji Settings"
+msgstr "تنظیمات rnmoji"
