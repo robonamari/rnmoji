@@ -2,28 +2,54 @@ name: Auto Release
 
 on:
   push:
-    tags:
-      - "v*"
+    paths:
+      - 'rnmoji.php'
 
 jobs:
-  create_release:
-    name: Create GitHub Release
+  check_and_release:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      id-token: write
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
-      - name: Get tag name
-        id: get_tag
-        run: echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
-      - name: Create zip archive
-        run: zip -r "rnmoji-${TAG_NAME}.zip" . -x ".github/*" ".git/*" "README.md" "SECURITY.md"  "languages/*.po"
-      - name: Create tar.gz archive
-        run: tar --exclude=.github --exclude=.git --exclude=README.md --exclude=SECURITY.md --exclude=languages/*.po --exclude="rnmoji-${TAG_NAME}.zip" --ignore-failed-read -czf "rnmoji-${TAG_NAME}.tar.gz" .
+          fetch-depth: 0
+      - name: Extract version from rnmoji.php
+        id: extract_version
+        run: |
+          VERSION=$(grep -Eo '\* Version:\s+[0-9.]+' rnmoji.php | awk '{print $3}')
+          echo "Detected version: $VERSION"
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+      - name: Check if tag already exists
+        id: check_tag
+        run: |
+          TAG_NAME="v${{ steps.extract_version.outputs.version }}"
+          if git tag -l "$TAG_NAME" | grep -q .; then
+            echo "Tag already exists: $TAG_NAME"
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "Tag does not exist yet"
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Exit if tag exists
+        if: steps.check_tag.outputs.exists == 'true'
+        run: |
+          echo "This version is already released."
+          exit 0
+      - name: Create Git tag and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git tag "v$VERSION"
+          git push origin "v$VERSION"
+      - name: Prepare release assets
+        run: |
+          TAG_NAME="v$VERSION"
+          echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
+          zip -r "rnmoji-${TAG_NAME}.zip" . -x ".github/*" ".git/*" "README.md" "SECURITY.md" "languages/*.po"
+          tar --exclude=.github --exclude=.git --exclude=README.md --exclude=SECURITY.md --exclude=languages/*.po --exclude="rnmoji-${TAG_NAME}.zip" --ignore-failed-read -czf "rnmoji-${TAG_NAME}.tar.gz" .
       - name: Upload Release
         uses: softprops/action-gh-release@v2
         with:
