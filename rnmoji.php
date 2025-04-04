@@ -3,7 +3,7 @@
  * Plugin Name:  rnmoji
  * Plugin URI:   https://github.com/robonamari/rnmoji
  * Description:  Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions.
- * Version:      0
+ * Version:      1.0.0
  * Requires PHP: 8.1
  * Author:       robonamari
  * Author URI:   https://robonamari.com
