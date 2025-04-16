@@ -21,3 +21,28 @@ rnmoji is a WordPress plugin that brings custom emojis to your comment sections,
 - Developed to support the latest PHP versions, ensuring optimal performance and high security.
 - Guaranteed proper functioning on the latest WordPress versions with continuous updates for the best user experience.
 - Option to back up custom emojis and easily restore them, ensuring the preservation and transfer of your unique settings.
+
+## Plugin Installation
+<details>
+<summary>3 Steps to Install rnmoji Plugin</summary>
+    
+### 1. Download the Plugin Files
+```bash
+git clone https://github.com/robonamari/Dirlotix-py
+```
+
+### 2. Install Python and Dependencies
+Install Python, then install the required Python dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the plugin
+```bash
+python index.py
+```
+
+### Done!
+Your plugin should be fully configured and ready to run!
+
+</details>
