@@ -21,4 +21,3 @@ rnmoji is a WordPress plugin that brings custom emojis to your comment sections,
 - Developed to support the latest PHP versions, ensuring optimal performance and high security.
 - Guaranteed proper functioning on the latest WordPress versions with continuous updates for the best user experience.
 - Option to back up custom emojis and easily restore them, ensuring the preservation and transfer of your unique settings.
-- 
