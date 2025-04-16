@@ -27,20 +27,11 @@ rnmoji is a WordPress plugin that brings custom emojis to your comment sections,
 <summary>3 Steps to Install rnmoji Plugin</summary>
     
 ### 1. Download the Plugin Files
-```bash
-git clone https://github.com/robonamari/Dirlotix-py
-```
 
 ### 2. Install Python and Dependencies
 Install Python, then install the required Python dependencies:
-```bash
-pip install -r requirements.txt
-```
 
 ### 3. Run the plugin
-```bash
-python index.py
-```
 
 ### Done!
 Your plugin should be fully configured and ready to run!
