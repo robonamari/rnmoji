@@ -5,10 +5,10 @@
 </div>
 
 <p align="center">
-    <img src="https://img.shields.io/github/languages/code-size/robonamari/rnmoji?style=flat" alt="Code Size">
-    <img src="https://tokei.rs/b1/github/robonamari/rnmoji?style=flat" alt="Total lines">
-    <img src="https://img.shields.io/badge/php-%5E8.1-blue" alt="php Versions">
-    <img src="https://img.shields.io/github/license/robonamari/rnmoji" alt="GitHub license">
+  <img src="https://img.shields.io/github/languages/code-size/robonamari/rnmoji?style=flat" alt="Code Size">
+  <img src="https://tokei.rs/b1/github/robonamari/rnmoji?style=flat" alt="Total lines">
+  <img src="https://img.shields.io/badge/php-%5E8.1-blue" alt="php Versions">
+  <img src="https://img.shields.io/github/license/robonamari/rnmoji" alt="GitHub license">
 </p>
 
 ---
@@ -37,13 +37,13 @@
 
 ### 1. دریافت فایل‌های افزونه
 
-برای دانلود آخرین نسخه افزونه، به صفحه انتشارهای GitHub مراجعه کنید:  
+برای دانلود آخرین نسخه افزونه، به صفحه انتشارهای GitHub مراجعه کنید:
 🔗 [rnmoji - GitHub Releases](https://github.com/robonamari/rnmoji/releases)
 
 ### 2. آپلود در وردپرس و اجرا
 
-وارد پیشخوان وردپرس شوید و از مسیر  
-افزونه‌ها » افزودن افزونه » بارگذاری افزونه  
+وارد پیشخوان وردپرس شوید و از مسیر
+افزونه‌ها » افزودن افزونه » بارگذاری افزونه
 فایل ZIP افزونه را انتخاب و بارگذاری کنید، سپس آن را نصب و فعال کنید.
 
 ### انجام شد!
