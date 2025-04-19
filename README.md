@@ -1,6 +1,7 @@
 <div align="center">
 
 [**Other Languages**](.github/README/)
+
 </div>
 
 <p align="center">
@@ -15,6 +16,7 @@
 rnmoji is a WordPress plugin that brings custom emojis to your comment sections, allowing users to express themselves with fun and unique reactions. This lightweight and easily integrated plugin is fully customizable, designed to enhance interaction on your website by adding a creative touch to every comment. Tailor the emoji experience to match your site's style and engage your audience in a playful way.
 
 ## Features
+
 - Ability to add unique custom emojis to the site's comments section to enhance user engagement and express emotions.
 - Fast installation process and seamless integration with all WordPress themes without the need for complex configurations.
 - Customizable language and appearance through the WordPress dashboard to match your site's style.
@@ -23,17 +25,23 @@ rnmoji is a WordPress plugin that brings custom emojis to your comment sections,
 - Option to back up custom emojis and easily restore them, ensuring the preservation and transfer of your unique settings.
 
 ## Plugin Installation
+
 <details>
 <summary>3 Steps to Install rnmoji Plugin</summary>
     
 ### 1. Download the Plugin Files
 
-### 2. Install Python and Dependencies
-Install Python, then install the required Python dependencies:
+To download the latest version of the plugin, visit the GitHub releases page:  
+🔗 [rnmoji - GitHub Releases](https://github.com/robonamari/rnmoji/releases)
 
-### 3. Run the plugin
+### 2. Upload to WordPress and Activate
 
-### Done!
-Your plugin should be fully configured and ready to run!
+Go to your WordPress dashboard and navigate to  
+Plugins » Add New » Upload Plugin  
+Select the plugin ZIP file, upload it, then install and activate it.
+
+### All Done!
+
+Your plugin should now be fully set up and ready to use!
 
 </details>
