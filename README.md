@@ -37,7 +37,7 @@ To download the latest version of the plugin, visit the GitHub releases page:
 ### 2. Upload to WordPress and Activate
 
 Go to your WordPress dashboard and navigate to  
-Plugins » Add New » Upload Plugin  
+Plugins » Add Plugins » Upload Plugin  
 Select the plugin ZIP file, upload it, then install and activate it.
 
 ### All Done!
