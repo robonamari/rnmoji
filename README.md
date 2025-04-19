@@ -28,16 +28,16 @@ rnmoji is a WordPress plugin that brings custom emojis to your comment sections,
 
 <details>
 <summary>3 Steps to Install rnmoji Plugin</summary>
-    
+
 ### 1. Download the Plugin Files
 
-To download the latest version of the plugin, visit the GitHub releases page:  
+To download the latest version of the plugin, visit the GitHub releases page:
 🔗 [rnmoji - GitHub Releases](https://github.com/robonamari/rnmoji/releases)
 
 ### 2. Upload to WordPress and Activate
 
-Go to your WordPress dashboard and navigate to  
-Plugins » Add Plugins » Upload Plugin  
+Go to your WordPress dashboard and navigate to
+Plugins » Add Plugins » Upload Plugin
 Select the plugin ZIP file, upload it, then install and activate it.
 
 ### All Done!
