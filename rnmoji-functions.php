@@ -64,7 +64,7 @@ function rnmoji_settings_page(): void
                 "Create Backup",
                 "rnmoji"
             ); ?>" class="button button-primary" />
-            <input type="file" name="backup_file" />
+            <input type="file" name="backup_file" required />
             <input type="submit" name="upload_backup" value="<?php _e(
                 "Upload Backup",
                 "rnmoji"
