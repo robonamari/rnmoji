@@ -57,5 +57,5 @@ jobs:
           tag_name: ${{ env.TAG_NAME }}
           name: "${{ env.TAG_NAME }}"
           files: |
-            rnmoji-${{ env.TAG_NAME }}.zip
+            rnmoji.zip
             rnmoji-${{ env.TAG_NAME }}.tar.gz
