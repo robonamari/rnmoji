@@ -48,7 +48,7 @@ function rnmoji_settings_page(): void
         <!-- Emoji upload form -->
         <form method="post" enctype="multipart/form-data">
             <h2><?php _e("Upload New Emoji", "rnmoji"); ?></h2>
-            <input type="file" name="emoji_file" required />
+            <input type="file" name="emoji_file" accept=".jpg, .jpeg, .png, .gif, .webp" required />
             <input type="submit" name="upload_emoji" value="<?php _e(
                 "Upload Emoji",
                 "rnmoji"
@@ -64,7 +64,7 @@ function rnmoji_settings_page(): void
                 "Create Backup",
                 "rnmoji"
             ); ?>" class="button button-primary" />
-            <input type="file" name="backup_file" required />
+            <input type="file" name="backup_file" accept="zip" required />
             <input type="submit" name="upload_backup" value="<?php _e(
                 "Upload Backup",
                 "rnmoji"
