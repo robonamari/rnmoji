@@ -5,5 +5,5 @@ updates:
     schedule:
       interval: "daily"
     labels:
-      - "enhancement"
+      - "dependencies"
     open-pull-requests-limit: 3
