@@ -49,8 +49,8 @@ jobs:
         run: |
           TAG_NAME="v$VERSION"
           echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
-          zip -r "rnmoji-${TAG_NAME}.zip" . -x ".github/*" ".git/*" "README.md" "SECURITY.md" "languages/*.po"
-          tar --exclude=.github --exclude=.git --exclude=README.md --exclude=SECURITY.md --exclude=languages/*.po --exclude="rnmoji-${TAG_NAME}.zip" --ignore-failed-read -czf "rnmoji-${TAG_NAME}.tar.gz" .
+          zip -r "rnmoji-${TAG_NAME}.zip" . -x ".github/*" ".git/*" "README.md" "languages/*.po"
+          tar --exclude=.github --exclude=.git --exclude=README.md --exclude=languages/*.po --exclude="rnmoji-${TAG_NAME}.zip" --ignore-failed-read -czf "rnmoji-${TAG_NAME}.tar.gz" .
       - name: Upload Release
         uses: softprops/action-gh-release@v2
         with:
