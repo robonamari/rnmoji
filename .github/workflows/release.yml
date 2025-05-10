@@ -24,7 +24,6 @@ jobs:
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "version=$VERSION" >> $GITHUB_OUTPUT
       - name: Check if tag already exists
-        id: check_tag
         run: |
           TAG_NAME="v${{ steps.extract_version.outputs.version }}"
           if git tag -l "$TAG_NAME" | grep -q .; then
