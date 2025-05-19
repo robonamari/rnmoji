@@ -128,7 +128,19 @@ function handle_emoji_upload(): void
     }
 
     $file = $_FILES['emoji_file'];
+
+    if ($file['size'] > 256 * 1024) {
+        echo '<div class="error"><p>' . __('File size must be 256 KB or less.', 'rnmoji') . '</p></div>';
+        return;
+    }
+
     $emoji_name = pathinfo($file['name'], PATHINFO_FILENAME);
+
+    if (!preg_match('/^[A-Za-z0-9_]{2,}$/', $emoji_name)) {
+        echo '<div class="error"><p>' . __('Emoji name must be at least 2 characters and only contain letters, numbers, and underscores.', 'rnmoji') . '</p></div>';
+        return;
+    }
+
     $target_path = RNMOJI_UPLOAD_DIR . $emoji_name . '.webp';
 
     if (file_exists($target_path)) {
@@ -158,6 +170,7 @@ function handle_emoji_upload(): void
     imagedestroy($resized_image);
     imagedestroy($uploaded_image);
 }
+
 
 /**
  * Create a ZIP backup of uploaded emojis.
