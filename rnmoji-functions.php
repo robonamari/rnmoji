@@ -49,10 +49,7 @@ function rnmoji_settings_page(): void
         <form method="post" enctype="multipart/form-data">
             <h2><?php _e("Upload New Emoji", "rnmoji"); ?></h2>
             <input type="file" name="emoji_file" accept=".jpg, .jpeg, .png, .gif, .webp" required />
-            <input type="submit" name="upload_emoji" value="<?php _e(
-                "Upload Emoji",
-                "rnmoji"
-            ); ?>" class="button button-primary" />
+            <input type="submit" name="upload_emoji" value="<?php _e("Upload Emoji", "rnmoji"); ?>" class="button button-primary" />
         </form>
 
         <hr />
@@ -60,64 +57,51 @@ function rnmoji_settings_page(): void
         <!-- Backup form -->
         <form method="post" enctype="multipart/form-data">
             <h2><?php _e("Backup", "rnmoji"); ?></h2>
-            <input type="submit" name="backup_emoji" value="<?php _e(
-                "Create Backup",
-                "rnmoji"
-            ); ?>" class="button button-primary" />
+            <input type="submit" name="backup_emoji" value="<?php _e("Create Backup", "rnmoji"); ?>" class="button button-primary" />
             <input type="file" name="backup_file" accept=".zip" required />
-            <input type="submit" name="upload_backup" value="<?php _e(
-                "Upload Backup",
-                "rnmoji"
-            ); ?>" class="button button-primary" />
+            <input type="submit" name="upload_backup" value="<?php _e("Upload Backup", "rnmoji"); ?>" class="button button-primary" />
         </form>
 
         <hr />
 
         <h2><?php _e("Uploaded Emojis", "rnmoji"); ?></h2>
-        <table class="form-table" style="width: 100%; border-collapse: collapse;">
+        <table class="wp-list-table widefat fixed striped">
             <thead>
                 <tr>
-                    <th>#</th>
-                    <th><?php _e("Emoji Image", "rnmoji"); ?></th>
-                    <th><?php _e("Emoji Name", "rnmoji"); ?></th>
-                    <th><?php _e("Actions", "rnmoji"); ?></th>
+                    <th scope="col" class="manage-column">#</th>
+                    <th scope="col" class="manage-column"><?php _e("Emoji Image", "rnmoji"); ?></th>
+                    <th scope="col" class="manage-column"><?php _e("Emoji Name", "rnmoji"); ?></th>
+                    <th scope="col" class="manage-column"><?php _e("Actions", "rnmoji"); ?></th>
                 </tr>
             </thead>
             <tbody>
-            <?php
-            $index = 1;
-            foreach ($emoji_files as $file) {
-                if ($file !== "." && $file !== "..") {
-
-                    $emoji_name = pathinfo($file, PATHINFO_FILENAME);
-                    $emoji_url = RNMOJI_UPLOAD_URL . $file;
-                    ?>
-                    <tr>
-                        <td><?= $index++ ?></td>
-                        <td><img src="<?= $emoji_url ?>" alt="<?= $emoji_name ?>" style="width: 25px; height: 25px;" /></td>
-                        <td>
-                            <form method="post" style="display: flex; gap: 5px;">
-                                <input type="hidden" name="old_emoji" value="<?= $file ?>" />
-                                <input type="text" name="emoji_name" value="<?= $emoji_name ?>" required />
-                                <input type="submit" name="rename_emoji" value="<?php _e(
-                                    "Rename",
-                                    "rnmoji"
-                                ); ?>" class="button button-secondary" />
-                            </form>
-                        </td>
-                        <td>
-                            <a href="<?= admin_url(
-                                "admin-post.php?action=delete_emoji&file=" .
-                                    urlencode($file)
-                            ) ?>" class="button button-secondary"><?php _e(
-    "Delete",
-    "rnmoji"
-); ?></a>
-                        </td>
-                    </tr>
-                    <?php
+                <?php
+                $index = 1;
+                foreach ($emoji_files as $file) {
+                    if ($file !== "." && $file !== "..") {
+                        $emoji_name = pathinfo($file, PATHINFO_FILENAME);
+                        $emoji_url = RNMOJI_UPLOAD_URL . $file;
+                        ?>
+                        <tr>
+                            <td><?= $index++ ?></td>
+                            <td><img src="<?= esc_url($emoji_url) ?>" alt="<?= esc_attr($emoji_name) ?>" width="25" height="25" /></td>
+                            <td>
+                                <form method="post" style="display: flex; gap: 5px;">
+                                    <input type="hidden" name="old_emoji" value="<?= esc_attr($file) ?>" />
+                                    <input type="text" name="emoji_name" value="<?= esc_attr($emoji_name) ?>" required />
+                                    <input type="submit" name="rename_emoji" value="<?php _e("Rename", "rnmoji"); ?>" class="button button-secondary" />
+                                </form>
+                            </td>
+                            <td>
+                                <a href="<?= esc_url(admin_url("admin-post.php?action=delete_emoji&file=" . urlencode($file))) ?>" class="button button-secondary">
+                                    <?php _e("Delete", "rnmoji"); ?>
+                                </a>
+                            </td>
+                        </tr>
+                        <?php
+                    }
                 }
-            }?>
+                ?>
             </tbody>
         </table>
     </div>
