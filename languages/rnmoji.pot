@@ -56,6 +56,9 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
+msgid "You have reached the maximum limit of 2000 emojis. Upload not allowed."
+msgstr ""
+
 msgid "File name is already taken. Emoji not uploaded."
 msgstr ""
 

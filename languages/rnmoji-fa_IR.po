@@ -121,3 +121,6 @@ msgstr "فایل ایموجی اصلی پیدا نشد."
 
 msgid "New emoji name already exists."
 msgstr "نام ایموجی جدید قبلاً وجود دارد."
+
+msgid "You have reached the maximum limit of 2000 emojis. Upload not allowed."
+msgstr "شما به حداکثر محدودیت ۲۰۰۰ ایموجی رسیدید. بارگذاری مجاز نیست."
