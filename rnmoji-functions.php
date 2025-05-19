@@ -8,18 +8,19 @@ declare(strict_types=1);
  */
 function rnmoji_settings_page(): void
 {
-    if (isset($_POST["upload_emoji"], $_FILES["emoji_file"]["name"])) {
+    if (isset($_POST['upload_emoji'], $_FILES['emoji_file']['name'])) {
         handle_emoji_upload();
     }
-    if (isset($_POST["backup_emoji"])) {
+    if (isset($_POST['backup_emoji'])) {
         create_backup();
     }
-    if (isset($_POST["upload_backup"], $_FILES["backup_file"]["name"])) {
+    if (isset($_POST['upload_backup'], $_FILES['backup_file']['name'])) {
         upload_backup();
     }
-    if (isset($_POST["rename_emoji"], $_POST["emoji_name"], $_POST["old_emoji"])) {
+    if (isset($_POST['rename_emoji'], $_POST['emoji_name'], $_POST['old_emoji'])) {
         rename_emoji();
     }
+
     $max_slots = 2000;
 
     if (is_dir(RNMOJI_UPLOAD_DIR)) {
@@ -30,32 +31,31 @@ function rnmoji_settings_page(): void
 
     $current_count = count($emoji_files);
     $available_slots = $max_slots - $current_count;
-
     ?>
     <div class="wrap">
-        <h1><?php _e("Plugin Settings", "rnmoji") ?></h1>
+        <h1><?php _e('Plugin Settings', 'rnmoji'); ?></h1>
 
         <form method="post" enctype="multipart/form-data">
-            <h2><?php _e("Upload New Emoji", "rnmoji") ?></h2>
+            <h2><?php _e('Upload New Emoji', 'rnmoji'); ?></h2>
             <p>
-                <?= __("You can upload up to 2000 custom emojis.", "rnmoji") ?><br />
-                <strong><?php _e("Upload Requirements:", "rnmoji") ?></strong><br />
-                - <?php _e("File Type:", "rnmoji") ?> .jpg, .jpeg, .png, .gif, .webp<br />
-                - <?php _e("Max file size: 256 KB", "rnmoji") ?><br />
-                - <?php _e("Recommended dimensions: 62 x 62 pixels", "rnmoji") ?><br />
-                - <?php _e("Naming: Emoji names must be at least 2 characters long and can only contain alphanumeric characters and underscores", "rnmoji") ?>
+                <?= __('You can upload up to 2000 custom emojis.', 'rnmoji'); ?><br />
+                <strong><?php _e('Upload Requirements:', 'rnmoji'); ?></strong><br />
+                - <?php _e('File Type:', 'rnmoji'); ?> .jpg, .jpeg, .png, .gif, .webp<br />
+                - <?php _e('Max file size: 256 KB', 'rnmoji'); ?><br />
+                - <?php _e('Recommended dimensions: 62 x 62 pixels', 'rnmoji'); ?><br />
+                - <?php _e('Naming: Emoji names must be at least 2 characters long and can only contain alphanumeric characters and underscores', 'rnmoji'); ?>
             </p>
             <input type="file" name="emoji_file" accept=".jpg,.jpeg,.png,.gif,.webp" required />
-            <input type="submit" name="upload_emoji" value="<?= esc_attr(__("Upload Emoji", "rnmoji")) ?>" class="button button-primary" />
+            <input type="submit" name="upload_emoji" value="<?= esc_attr(__('Upload Emoji', 'rnmoji')); ?>" class="button button-primary" />
         </form>
 
         <hr />
 
         <form method="post" enctype="multipart/form-data">
-            <h2><?php _e("Backup", "rnmoji") ?></h2>
-            <input type="submit" name="backup_emoji" value="<?= esc_attr(__("Create Backup", "rnmoji")) ?>" class="button button-primary" />
+            <h2><?php _e('Backup', 'rnmoji'); ?></h2>
+            <input type="submit" name="backup_emoji" value="<?= esc_attr(__('Create Backup', 'rnmoji')); ?>" class="button button-primary" />
             <input type="file" name="backup_file" accept=".zip" required />
-            <input type="submit" name="upload_backup" value="<?= esc_attr(__("Upload Backup", "rnmoji")) ?>" class="button button-primary" />
+            <input type="submit" name="upload_backup" value="<?= esc_attr(__('Upload Backup', 'rnmoji')); ?>" class="button button-primary" />
         </form>
 
         <hr />
@@ -63,7 +63,7 @@ function rnmoji_settings_page(): void
         <h2>
             <?php
             printf(
-                __("Uploaded Emojis - (%s) slots available", "rnmoji"),
+                __('Uploaded Emojis - (%s) slots available', 'rnmoji'),
                 number_format_i18n($available_slots)
             );
             ?>
@@ -73,35 +73,35 @@ function rnmoji_settings_page(): void
             <thead>
                 <tr>
                     <th>#</th>
-                    <th><?php _e("Emoji Image", "rnmoji") ?></th>
-                    <th><?php _e("Emoji Name", "rnmoji") ?></th>
-                    <th><?php _e("Actions", "rnmoji") ?></th>
+                    <th><?php _e('Emoji Image', 'rnmoji'); ?></th>
+                    <th><?php _e('Emoji Name', 'rnmoji'); ?></th>
+                    <th><?php _e('Actions', 'rnmoji'); ?></th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 $i = 1;
-                foreach ($emoji_files as $file):
+                foreach ($emoji_files as $file) :
                     $name = pathinfo($file, PATHINFO_FILENAME);
                     $url = RNMOJI_UPLOAD_URL . $file;
                 ?>
-                <tr>
-                    <td><?= $i++ ?></td>
-                    <td><img src="<?= esc_url($url) ?>" alt="<?= esc_attr($name) ?>" width="25" height="25" /></td>
-                    <td>
-                        <form method="post" style="display:flex;gap:5px" novalidate>
-                            <input type="hidden" name="old_emoji" value="<?= esc_attr($file) ?>" />
-                            <input type="text" name="emoji_name" value="<?= esc_attr($name) ?>" required pattern="[A-Za-z0-9_]{2,}" title="At least 2 chars, alphanumeric and underscores only" />
-                            <input type="submit" name="rename_emoji" value="<?= esc_attr(__("Rename", "rnmoji")) ?>" class="button button-secondary" />
-                        </form>
-                    </td>
-                    <td>
-                        <a href="<?= esc_url(admin_url("admin-post.php?action=delete_emoji&file=" . urlencode($file))) ?>" class="button button-secondary">
-                            <?= __("Delete", "rnmoji") ?>
-                        </a>
-                    </td>
-                </tr>
-                <?php endforeach ?>
+                    <tr>
+                        <td><?= $i++; ?></td>
+                        <td><img src="<?= esc_url($url); ?>" alt="<?= esc_attr($name); ?>" width="25" height="25" /></td>
+                        <td>
+                            <form method="post" style="display:flex;gap:5px" novalidate>
+                                <input type="hidden" name="old_emoji" value="<?= esc_attr($file); ?>" />
+                                <input type="text" name="emoji_name" value="<?= esc_attr($name); ?>" required pattern="[A-Za-z0-9_]{2,}" title="At least 2 chars, alphanumeric and underscores only" />
+                                <input type="submit" name="rename_emoji" value="<?= esc_attr(__('Rename', 'rnmoji')); ?>" class="button button-secondary" />
+                            </form>
+                        </td>
+                        <td>
+                            <a href="<?= esc_url(admin_url('admin-post.php?action=delete_emoji&file=' . urlencode($file))); ?>" class="button button-secondary">
+                                <?= __('Delete', 'rnmoji'); ?>
+                            </a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
@@ -121,32 +121,38 @@ function handle_emoji_upload(): void
         mkdir(RNMOJI_UPLOAD_DIR, 0777, true);
     }
 
-    $file = $_FILES["emoji_file"];
-    $emoji_name = pathinfo($file["name"], PATHINFO_FILENAME);
-    $target_path = RNMOJI_UPLOAD_DIR . $emoji_name . ".webp";
-
-    if (file_exists($target_path)) {
-        echo '<div class="error"><p>' . __("File name is already taken. Emoji not uploaded.", "rnmoji") . "</p></div>";
+    $emoji_files = array_diff(scandir(RNMOJI_UPLOAD_DIR), ['.', '..']);
+    if (count($emoji_files) >= 2000) {
+        echo '<div class="error"><p>' . __('You have reached the maximum limit of 2000 emojis. Upload not allowed.', 'rnmoji') . '</p></div>';
         return;
     }
 
-    $uploaded_image = @imagecreatefromstring(file_get_contents($file["tmp_name"]));
+    $file = $_FILES['emoji_file'];
+    $emoji_name = pathinfo($file['name'], PATHINFO_FILENAME);
+    $target_path = RNMOJI_UPLOAD_DIR . $emoji_name . '.webp';
+
+    if (file_exists($target_path)) {
+        echo '<div class="error"><p>' . __('File name is already taken. Emoji not uploaded.', 'rnmoji') . '</p></div>';
+        return;
+    }
+
+    $uploaded_image = @imagecreatefromstring(file_get_contents($file['tmp_name']));
     if ($uploaded_image === false) {
-        echo '<div class="error"><p>' . __("Error loading image.", "rnmoji") . "</p></div>";
+        echo '<div class="error"><p>' . __('Error loading image.', 'rnmoji') . '</p></div>';
         return;
     }
 
     $resized_image = imagescale($uploaded_image, 64, 64);
     if ($resized_image === false) {
-        echo '<div class="error"><p>' . __("Error resizing image.", "rnmoji") . "</p></div>";
+        echo '<div class="error"><p>' . __('Error resizing image.', 'rnmoji') . '</p></div>';
         imagedestroy($uploaded_image);
         return;
     }
 
     if (!imagewebp($resized_image, $target_path)) {
-        echo '<div class="error"><p>' . __("Error converting image to WebP.", "rnmoji") . "</p></div>";
+        echo '<div class="error"><p>' . __('Error converting image to WebP.', 'rnmoji') . '</p></div>';
     } else {
-        echo '<div class="updated"><p>' . __("Emoji uploaded and resized successfully.", "rnmoji") . "</p></div>";
+        echo '<div class="updated"><p>' . __('Emoji uploaded and resized successfully.', 'rnmoji') . '</p></div>';
     }
 
     imagedestroy($resized_image);
@@ -161,14 +167,14 @@ function handle_emoji_upload(): void
 function create_backup(): void
 {
     $zip = new ZipArchive();
-    $backup_file = plugin_dir_path(__FILE__) . "emoji-backup.zip";
+    $backup_file = plugin_dir_path(__FILE__) . 'emoji-backup.zip';
 
     if (file_exists($backup_file)) {
         unlink($backup_file);
     }
 
     if ($zip->open($backup_file, ZipArchive::CREATE) !== true) {
-        echo '<div class="error"><p>' . __("Error creating backup.", "rnmoji") . "</p></div>";
+        echo '<div class="error"><p>' . __('Error creating backup.', 'rnmoji') . '</p></div>';
         return;
     }
 
@@ -184,9 +190,9 @@ function create_backup(): void
 
     $zip->close();
 
-    echo '<div class="updated"><p>' . __("Backup created successfully.", "rnmoji") .
-        ' <a href="' . esc_url(plugin_dir_url(__FILE__) . "emoji-backup.zip") . '">' .
-        __("Download Backup", "rnmoji") . '</a></p></div>';
+    echo '<div class="updated"><p>' . __('Backup created successfully.', 'rnmoji') .
+        ' <a href="' . esc_url(plugin_dir_url(__FILE__) . 'emoji-backup.zip') . '">' .
+        __('Download Backup', 'rnmoji') . '</a></p></div>';
 }
 
 /**
@@ -200,18 +206,18 @@ function upload_backup(): void
         mkdir(RNMOJI_UPLOAD_DIR, 0777, true);
     }
 
-    $uploaded_backup = $_FILES["backup_file"];
+    $uploaded_backup = $_FILES['backup_file'];
     $zip = new ZipArchive();
 
-    if ($zip->open($uploaded_backup["tmp_name"]) !== true) {
-        echo '<div class="error"><p>' . __("Error uploading backup file.", "rnmoji") . "</p></div>";
+    if ($zip->open($uploaded_backup['tmp_name']) !== true) {
+        echo '<div class="error"><p>' . __('Error uploading backup file.', 'rnmoji') . '</p></div>';
         return;
     }
 
     $zip->extractTo(RNMOJI_UPLOAD_DIR);
     $zip->close();
 
-    echo '<div class="updated"><p>' . __("Backup uploaded successfully.", "rnmoji") . "</p></div>";
+    echo '<div class="updated"><p>' . __('Backup uploaded successfully.', 'rnmoji') . '</p></div>';
 }
 
 /**
@@ -221,11 +227,11 @@ function upload_backup(): void
  */
 function rename_emoji(): void
 {
-    $old_emoji = $_POST["old_emoji"] ?? '';
-    $new_name = sanitize_text_field($_POST["emoji_name"] ?? '');
+    $old_emoji = $_POST['old_emoji'] ?? '';
+    $new_name = sanitize_text_field($_POST['emoji_name'] ?? '');
 
     if ($old_emoji === '' || $new_name === '') {
-        echo '<div class="error"><p>' . __("Invalid emoji name or old filename.", "rnmoji") . "</p></div>";
+        echo '<div class="error"><p>' . __('Invalid emoji name or old filename.', 'rnmoji') . '</p></div>';
         return;
     }
 
@@ -234,17 +240,17 @@ function rename_emoji(): void
     $new_path = RNMOJI_UPLOAD_DIR . $new_name . '.' . $extension;
 
     if (!file_exists($old_path)) {
-        echo '<div class="error"><p>' . __("Original emoji file not found.", "rnmoji") . "</p></div>";
+        echo '<div class="error"><p>' . __('Original emoji file not found.', 'rnmoji') . '</p></div>';
         return;
     }
 
     if (file_exists($new_path)) {
-        echo '<div class="error"><p>' . __("New emoji name already exists.", "rnmoji") . "</p></div>";
+        echo '<div class="error"><p>' . __('New emoji name already exists.', 'rnmoji') . '</p></div>';
         return;
     }
 
     if (rename($old_path, $new_path)) {
-        echo '<div class="updated"><p>' . __("Emoji renamed successfully.", "rnmoji") . "</p></div>";
+        echo '<div class="updated"><p>' . __('Emoji renamed successfully.', 'rnmoji') . '</p></div>';
     } else {
         echo '<div class="error"><p>' . __("Error renaming emoji.", "rnmoji") . "</p></div>";
     }
