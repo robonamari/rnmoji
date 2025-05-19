@@ -8,6 +8,24 @@ msgstr ""
 msgid "Upload New Emoji"
 msgstr ""
 
+msgid "You can upload up to 2000 custom emojis."
+msgstr ""
+
+msgid "Upload Requirements:"
+msgstr ""
+
+msgid "File Type:"
+msgstr ""
+
+msgid "Max file size: 256 KB"
+msgstr ""
+
+msgid "Recommended dimensions: 62 x 62 pixels"
+msgstr ""
+
+msgid "Naming: Emoji names must be at least 2 characters long and can only contain alphanumeric characters and underscores"
+msgstr ""
+
 msgid "Upload Emoji"
 msgstr ""
 
@@ -20,7 +38,7 @@ msgstr ""
 msgid "Upload Backup"
 msgstr ""
 
-msgid "Uploaded Emojis"
+msgid "Uploaded Emojis - (%s) slots available"
 msgstr ""
 
 msgid "Emoji Image"
@@ -41,13 +59,19 @@ msgstr ""
 msgid "File name is already taken. Emoji not uploaded."
 msgstr ""
 
-msgid "Emoji uploaded and resized successfully."
+msgid "Error loading image."
+msgstr ""
+
+msgid "Error resizing image."
 msgstr ""
 
 msgid "Error converting image to WebP."
 msgstr ""
 
-msgid "Error loading image."
+msgid "Emoji uploaded and resized successfully."
+msgstr ""
+
+msgid "Error creating backup."
 msgstr ""
 
 msgid "Backup created successfully."
@@ -56,13 +80,19 @@ msgstr ""
 msgid "Download Backup"
 msgstr ""
 
-msgid "Error creating backup."
+msgid "Error uploading backup file."
 msgstr ""
 
 msgid "Backup uploaded successfully."
 msgstr ""
 
-msgid "Error uploading backup file."
+msgid "Invalid emoji name or old filename."
+msgstr ""
+
+msgid "Original emoji file not found."
+msgstr ""
+
+msgid "New emoji name already exists."
 msgstr ""
 
 msgid "Emoji renamed successfully."

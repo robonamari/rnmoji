@@ -88,3 +88,36 @@ msgstr "تنظیمات افزونه rnmoji"
 
 msgid "rnmoji"
 msgstr "rnmoji"
+
+msgid "You can upload up to 2000 custom emojis."
+msgstr "شما می‌توانید تا ۲۰۰۰ ایموجی سفارشی آپلود کنید."
+
+msgid "Upload Requirements:"
+msgstr "شرایط آپلود:"
+
+msgid "File Type:"
+msgstr "نوع فایل:"
+
+msgid "Max file size: 256 KB"
+msgstr "حداکثر حجم فایل: ۲۵۶ کیلوبایت"
+
+msgid "Recommended dimensions: 62 x 62 pixels"
+msgstr "ابعاد پیشنهادی: ۶۲ در ۶۲ پیکسل"
+
+msgid "Naming: Emoji names must be at least 2 characters long and can only contain alphanumeric characters and underscores"
+msgstr "نام‌گذاری: نام ایموجی باید حداقل ۲ کاراکتر باشد و فقط شامل حروف، اعداد و زیرخط باشد"
+
+msgid "Uploaded Emojis - (%s) slots available"
+msgstr "ایموجی‌های آپلودشده - (%s) جای خالی موجود"
+
+msgid "Error resizing image."
+msgstr "خطا در تغییر اندازه تصویر."
+
+msgid "Invalid emoji name or old filename."
+msgstr "نام ایموجی یا نام فایل قدیمی نامعتبر است."
+
+msgid "Original emoji file not found."
+msgstr "فایل ایموجی اصلی پیدا نشد."
+
+msgid "New emoji name already exists."
+msgstr "نام ایموجی جدید قبلاً وجود دارد."
