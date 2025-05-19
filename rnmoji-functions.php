@@ -20,10 +20,17 @@ function rnmoji_settings_page(): void
     if (isset($_POST["rename_emoji"], $_POST["emoji_name"], $_POST["old_emoji"])) {
         rename_emoji();
     }
-    $emoji_files = array_diff(scandir(RNMOJI_UPLOAD_DIR), ['.', '..']);
-    $current_count = count($emoji_files);
     $max_slots = 2000;
+
+    if (is_dir(RNMOJI_UPLOAD_DIR)) {
+        $emoji_files = array_diff(scandir(RNMOJI_UPLOAD_DIR), ['.', '..']);
+    } else {
+        $emoji_files = [];
+    }
+
+    $current_count = count($emoji_files);
     $available_slots = $max_slots - $current_count;
+
     ?>
     <div class="wrap">
         <h1><?php _e("Plugin Settings", "rnmoji") ?></h1>
