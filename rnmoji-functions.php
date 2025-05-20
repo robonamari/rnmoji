@@ -93,18 +93,18 @@ function rnmoji_settings_page(): void
             style="display:flex; justify-content:space-between; align-items:center;"
         >
             <span>
+                <?= sprintf(
+                    esc_html__('Emojis - %s slots available', 'rnmoji'),
+                    number_format_i18n($available_slots)
+                ); ?>
+            </span>
+            <span>
                 <input
                     type="search"
                     id="emoji_search"
                     placeholder="<?= esc_attr__('Search Emojis', 'rnmoji'); ?>"
                     aria-label="<?= esc_attr__('Search Emojis', 'rnmoji'); ?>"
                 />
-            </span>
-            <span>
-                <?= sprintf(
-                    esc_html__('Emojis - %s slots available', 'rnmoji'),
-                    number_format_i18n($available_slots)
-                ); ?>
             </span>
         </h2>
 
