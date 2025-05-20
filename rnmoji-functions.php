@@ -30,7 +30,6 @@ function rnmoji_settings_page(): void
 
     $current_count = count($emoji_files);
     $available_slots = $max_slots - $current_count;
-    $is_rtl = is_rtl();
     ?>
     <div class="wrap">
         <h1><?= esc_html__('Plugin Settings', 'rnmoji'); ?></h1>
@@ -91,7 +90,7 @@ function rnmoji_settings_page(): void
         <hr>
 
         <h2
-            style="display:flex; justify-content:space-between; align-items:center; flex-direction: <?= $is_rtl ? 'row' : 'row-reverse'; ?>;"
+            style="display:flex; justify-content:space-between; align-items:center;"
         >
             <span>
                 <input
