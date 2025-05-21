@@ -10,7 +10,7 @@ function rnmoji_settings_page(): void
 {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST['upload_emoji'], $_FILES['emoji_file']['name'])) {
-            handle_emoji_upload();
+            emoji_upload();
         }
         if (isset($_POST['backup_emoji'])) {
             create_backup();
@@ -191,7 +191,7 @@ function rnmoji_settings_page(): void
  *
  * @return void
  */
-function handle_emoji_upload(): void
+function emoji_upload(): void
 {
     if (!file_exists(RNMOJI_UPLOAD_DIR) && !mkdir(RNMOJI_UPLOAD_DIR, 0777, true) && !is_dir(RNMOJI_UPLOAD_DIR)) {
         echo '<div class="error"><p>' . esc_html__('Unable to create upload directory.', 'rnmoji') . '</p></div>';
