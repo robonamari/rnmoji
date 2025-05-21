@@ -1,3 +1,4 @@
 assets/emoji/
 emoji-backup.zip
-utility.py  # Translation management tool
+# Translation management tool
+utility.py
