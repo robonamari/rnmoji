@@ -39,7 +39,7 @@ function rnmoji_settings_page(): void
             <p>
                 <?= esc_html__('You can upload up to 2000 custom emojis.', 'rnmoji'); ?><br>
                 <strong><?= esc_html__('Upload Requirements:', 'rnmoji'); ?></strong><br>
-                - <?= esc_html__('File Type:', 'rnmoji'); ?> .jpg, .jpeg, .png, .gif, .webp<br>
+                - <?= esc_html__('File Type:', 'rnmoji'); ?> <span style="direction:ltr; unicode-bidi:embed;">.jpg, .jpeg, .png, .gif, .webp</span><br>
                 - <?= esc_html__('Max file size: 256 KB', 'rnmoji'); ?><br>
                 - <?= esc_html__('Recommended dimensions: 62 x 62 pixels', 'rnmoji'); ?><br>
                 - <?= esc_html__('Naming: Emoji names must be at least 2 characters long and can only contain alphanumeric characters and underscores', 'rnmoji'); ?>
