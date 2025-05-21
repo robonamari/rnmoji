@@ -13,7 +13,7 @@ function rnmoji_settings_page(): void
             upload_emoji();
         }
         if (isset($_POST['backup_emoji'])) {
-            create_backup();
+            backup_emoji();
         }
         if (isset($_POST['upload_backup'], $_FILES['backup_file']['name'])) {
             upload_backup();
@@ -258,7 +258,7 @@ function upload_emoji(): void
  *
  * @return void
  */
-function create_backup(): void
+function backup_emoji(): void
 {
     $backup_file = plugin_dir_path(__FILE__) . 'emoji-backup.zip';
 
