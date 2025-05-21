@@ -19,8 +19,8 @@ if (!defined("ABSPATH")) {
     exit();
 }
 
-define("RNMOJI_UPLOAD_DIR", plugin_dir_path(__FILE__) . "uploads/");
-define("RNMOJI_UPLOAD_URL", plugin_dir_url(__FILE__) . "uploads/");
+define("RNMOJI_UPLOAD_DIR", plugin_dir_path(__FILE__) . "assets/emoji/");
+define("RNMOJI_UPLOAD_URL", plugin_dir_url(__FILE__) . "assets/emoji/");
 
 require_once __DIR__ . "/rnmoji-functions.php";
 
