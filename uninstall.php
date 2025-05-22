@@ -9,7 +9,7 @@
 
 declare(strict_types=1);
 
-defined('WP_UNINSTALL_PLUGIN') || exit;
+defined("WP_UNINSTALL_PLUGIN") || exit();
 
 /**
  * Deletes the rnmoji emoji upload directory on uninstall.
@@ -18,14 +18,17 @@ defined('WP_UNINSTALL_PLUGIN') || exit;
  */
 function rnmoji_delete_emoji_folder(): void
 {
-    $emoji_dir = plugin_dir_path(__FILE__) . 'assets/emoji/';
+    $emoji_dir = plugin_dir_path(__FILE__) . "assets/emoji/";
 
     if (!is_dir($emoji_dir)) {
         return;
     }
 
     $files = new RecursiveIteratorIterator(
-        new RecursiveDirectoryIterator($emoji_dir, RecursiveDirectoryIterator::SKIP_DOTS),
+        new RecursiveDirectoryIterator(
+            $emoji_dir,
+            RecursiveDirectoryIterator::SKIP_DOTS
+        ),
         RecursiveIteratorIterator::CHILD_FIRST
     );
 
