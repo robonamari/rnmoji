@@ -36,20 +36,6 @@ function rnmoji_create_assets_folder(): void {
 
 register_activation_hook(__FILE__, 'rnmoji_create_assets_folder');
 
-/**
- * Load plugin text domain for translations.
- *
- * @return void
- */
-function rnmoji_load_textdomain(): void
-{
-    load_plugin_textdomain(
-        "rnmoji",
-        false,
-        dirname(plugin_basename(__FILE__)) . "/languages/"
-    );
-}
-add_action("plugins_loaded", "rnmoji_load_textdomain");
 
 /**
  * Add settings link to the plugin actions.
