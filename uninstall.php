@@ -2,43 +2,40 @@
 /**
  * Uninstall script for the rnmoji plugin.
  *
- * This script removes all plugin-related files and directories upon uninstallation.
+ * Deletes plugin-generated files and options during uninstallation.
  *
  * @package rnmoji
  */
 
 declare(strict_types=1);
 
-// Exit if accessed directly.
 defined('WP_UNINSTALL_PLUGIN') || exit;
 
 /**
- * Handles the uninstallation process of the rnmoji plugin.
- *
- * Deletes all files and directories associated with the plugin.
+ * Deletes the rnmoji emoji upload directory on uninstall.
  *
  * @return void
  */
-function rnmoji_uninstall(): void
+function rnmoji_delete_emoji_folder(): void
 {
-    $plugin_dir = plugin_dir_path(__FILE__);
+    $emoji_dir = plugin_dir_path(__FILE__) . 'assets/emoji/';
 
-    if (is_dir($plugin_dir)) {
-        $files = new RecursiveIteratorIterator(
-            new RecursiveDirectoryIterator(
-                $plugin_dir,
-                RecursiveDirectoryIterator::SKIP_DOTS
-            ),
-            RecursiveIteratorIterator::CHILD_FIRST
-        );
-
-        foreach ($files as $fileinfo) {
-            $action = $fileinfo->isDir() ? 'rmdir' : 'unlink';
-            $action($fileinfo->getRealPath());
-        }
-
-        rmdir($plugin_dir);
+    if (!is_dir($emoji_dir)) {
+        return;
     }
+
+    $files = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($emoji_dir, RecursiveDirectoryIterator::SKIP_DOTS),
+        RecursiveIteratorIterator::CHILD_FIRST
+    );
+
+    foreach ($files as $fileinfo) {
+        $fileinfo->isDir()
+            ? rmdir($fileinfo->getRealPath())
+            : unlink($fileinfo->getRealPath());
+    }
+
+    rmdir($emoji_dir);
 }
 
-rnmoji_uninstall();
+rnmoji_delete_emoji_folder();
