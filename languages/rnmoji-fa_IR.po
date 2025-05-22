@@ -196,3 +196,6 @@ msgstr "فایل اصلی ایموجی وجود ندارد."
 
 msgid "Failed to rename emoji."
 msgstr "تغییر نام ایموجی ناموفق بود."
+
+msgid "No emoji files found to back up."
+msgstr "هیچ فایل ایموجی‌ای برای پشتیبان‌گیری پیدا نشد."

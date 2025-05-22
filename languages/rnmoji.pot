@@ -2,6 +2,18 @@
 msgid ""
 msgstr ""
 
+msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Plugin Settings rnmoji"
+msgstr ""
+
+msgid "rnmoji"
+msgstr ""
+
 msgid "Plugin Settings"
 msgstr ""
 
@@ -41,13 +53,13 @@ msgstr ""
 msgid "Upload Backup"
 msgstr ""
 
-msgid "Search Emojis"
-msgstr ""
-
-msgid "Search Emojis"
-msgstr ""
-
 msgid "Emojis - %s slots available"
+msgstr ""
+
+msgid "Search Emojis"
+msgstr ""
+
+msgid "Search Emojis"
 msgstr ""
 
 msgid "List of uploaded emojis with actions"
@@ -113,6 +125,9 @@ msgstr ""
 msgid "Failed to create backup ZIP file."
 msgstr ""
 
+msgid "No emoji files found to back up."
+msgstr ""
+
 msgid "Download Backup"
 msgstr ""
 
@@ -159,16 +174,4 @@ msgid "Unauthorized access."
 msgstr ""
 
 msgid "File not found."
-msgstr ""
-
-msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
-msgstr ""
-
-msgid "Settings"
-msgstr ""
-
-msgid "Plugin Settings rnmoji"
-msgstr ""
-
-msgid "rnmoji"
 msgstr ""
