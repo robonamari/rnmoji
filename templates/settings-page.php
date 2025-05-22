@@ -275,6 +275,11 @@ function backup_emoji(): void
 
     $files = array_diff(scandir(RNMOJI_UPLOAD_DIR), ['.', '..']);
 
+    if (empty($files)) {
+        echo '<div class="notice notice-warning"><p>' . esc_html__('No emoji files found to back up.', 'rnmoji') . '</p></div>';
+        return;
+    }
+
     foreach ($files as $file) {
         $full_path = RNMOJI_UPLOAD_DIR . $file;
         if (is_file($full_path)) {
