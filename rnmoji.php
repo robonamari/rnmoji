@@ -23,6 +23,18 @@ define("RNMOJI_UPLOAD_DIR", plugin_dir_path(__FILE__) . "assets/emoji/");
 define("RNMOJI_UPLOAD_URL", plugin_dir_url(__FILE__) . "assets/emoji/");
 
 require_once __DIR__ . "/rnmoji-functions.php";
+/**
+ * Create assets/emoji directory on plugin activation.
+ */
+function rnmoji_create_assets_folder(): void {
+    $upload_dir = plugin_dir_path(__FILE__) . 'assets/emoji/';
+
+    if (!file_exists($upload_dir)) {
+        wp_mkdir_p($upload_dir);
+    }
+}
+
+register_activation_hook(__FILE__, 'rnmoji_create_assets_folder');
 
 /**
  * Load plugin text domain for translations.
