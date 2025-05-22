@@ -10,7 +10,7 @@
 declare(strict_types=1);
 
 // Exit if accessed directly.
-defined("WP_UNINSTALL_PLUGIN") || exit();
+defined("WP_UNINSTALL_PLUGIN") || exit;
 
 /**
  * Handles the uninstallation process of the rnmoji plugin.

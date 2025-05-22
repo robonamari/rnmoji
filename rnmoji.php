@@ -16,7 +16,7 @@
 declare(strict_types=1);
 
 if (!defined("ABSPATH")) {
-    exit();
+    exit;
 }
 
 define("RNMOJI_UPLOAD_DIR", plugin_dir_path(__FILE__) . "assets/emoji/");

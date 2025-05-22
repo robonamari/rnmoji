@@ -404,7 +404,7 @@ function rnmoji_delete_emoji(): void
         unlink($file_path);
         $redirect_url = add_query_arg("message", "emoji_deleted", admin_url("plugins.php?page=rnmoji-settings"));
         wp_redirect($redirect_url);
-        exit();
+        exit;
     }
 
     echo '<div class="error"><p>' . __("File not found.", "rnmoji") . "</p></div>";
