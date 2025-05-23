@@ -10,7 +10,7 @@ function upload_emoji(): void {
     $emoji_files = array_diff(scandir(RNMOJI_UPLOAD_DIR), ['.', '..']);
     if (count($emoji_files) >= 2000) {
         echo '<div class="error"><p>' .
-            esc_html__("You have reached the maximum limit of 2000 emojis. Upload not allowed.", "rnmoji") .
+            esc_html__('You have reached the maximum limit of 2000 emojis. Upload not allowed.', 'rnmoji') .
             '</p></div>';
         return;
     }
@@ -18,14 +18,14 @@ function upload_emoji(): void {
     $file = $_FILES['emoji_file'] ?? null;
     if (!$file || $file['error'] !== UPLOAD_ERR_OK) {
         echo '<div class="error"><p>' .
-            esc_html__("Error uploading file.", "rnmoji") .
+            esc_html__('Error uploading file.', 'rnmoji') .
             '</p></div>';
         return;
     }
 
     if ($file['size'] > 256 * 1024) {
         echo '<div class="error"><p>' .
-            esc_html__("File size must be 256 KB or less.", "rnmoji") .
+            esc_html__('File size must be 256 KB or less.', 'rnmoji') .
             '</p></div>';
         return;
     }
@@ -33,7 +33,7 @@ function upload_emoji(): void {
     $emoji_name = pathinfo($file['name'], PATHINFO_FILENAME);
     if (!preg_match('/^[A-Za-z0-9_]{2,}$/', $emoji_name)) {
         echo '<div class="error"><p>' .
-            esc_html__("Emoji name must be at least 2 characters and only contain letters, numbers, and underscores.", "rnmoji") .
+            esc_html__('Emoji name must be at least 2 characters and only contain letters, numbers, and underscores.', 'rnmoji') .
             '</p></div>';
         return;
     }
@@ -41,7 +41,7 @@ function upload_emoji(): void {
     $target_path = RNMOJI_UPLOAD_DIR . $emoji_name . '.webp';
     if (file_exists($target_path)) {
         echo '<div class="error"><p>' .
-            esc_html__("File name is already taken. Emoji not uploaded.", "rnmoji") .
+            esc_html__('File name is already taken. Emoji not uploaded.', 'rnmoji') .
             '</p></div>';
         return;
     }
@@ -49,7 +49,7 @@ function upload_emoji(): void {
     $uploaded_image = @imagecreatefromstring(file_get_contents($file['tmp_name']));
     if (!$uploaded_image) {
         echo '<div class="error"><p>' .
-            esc_html__("Error loading image.", "rnmoji") .
+            esc_html__('Error loading image.', 'rnmoji') .
             '</p></div>';
         return;
     }
@@ -58,18 +58,18 @@ function upload_emoji(): void {
     if (!$resized_image) {
         imagedestroy($uploaded_image);
         echo '<div class="error"><p>' .
-            esc_html__("Error resizing image.", "rnmoji") .
+            esc_html__('Error resizing image.', 'rnmoji') .
             '</p></div>';
         return;
     }
 
     if (!imagewebp($resized_image, $target_path)) {
         echo '<div class="error"><p>' .
-            esc_html__("Error converting image to WebP.", "rnmoji") .
+            esc_html__('Error converting image to WebP.', 'rnmoji') .
             '</p></div>';
     } else {
         echo '<div class="updated"><p>' .
-            esc_html__("Emoji uploaded and resized successfully.", "rnmoji") .
+            esc_html__('Emoji uploaded and resized successfully.', 'rnmoji') .
             '</p></div>';
     }
 
@@ -87,7 +87,7 @@ function backup_emoji(): void {
 
     if (file_exists($backup_file) && !unlink($backup_file)) {
         echo '<div class="error"><p>' .
-            esc_html__("Unable to delete existing backup file.", "rnmoji") .
+            esc_html__('Unable to delete existing backup file.', 'rnmoji') .
             '</p></div>';
         return;
     }
@@ -95,7 +95,7 @@ function backup_emoji(): void {
     $zip = new ZipArchive();
     if ($zip->open($backup_file, ZipArchive::CREATE) !== true) {
         echo '<div class="error"><p>' .
-            esc_html__("Failed to create backup ZIP file.", "rnmoji") .
+            esc_html__('Failed to create backup ZIP file.', 'rnmoji') .
             '</p></div>';
         return;
     }
@@ -103,7 +103,7 @@ function backup_emoji(): void {
     $files = array_diff(scandir(RNMOJI_UPLOAD_DIR), ['.', '..']);
     if (empty($files)) {
         echo '<div class="notice notice-warning"><p>' .
-            esc_html__("No emoji files found to back up.", "rnmoji") .
+            esc_html__('No emoji files found to back up.', 'rnmoji') .
             '</p></div>';
         return;
     }
@@ -121,13 +121,13 @@ function backup_emoji(): void {
         $backup_url = plugin_dir_url(__FILE__) . 'emoji-backup.zip';
         printf(
             '<div class="updated"><p>%s <a href="%s" download>%s</a></p></div>',
-            esc_html__("Backup created successfully.", "rnmoji"),
+            esc_html__('Backup created successfully.', 'rnmoji'),
             esc_url($backup_url),
-            esc_html__("Download Backup", "rnmoji")
+            esc_html__('Download Backup', 'rnmoji')
         );
     } else {
         echo '<div class="error"><p>' .
-            esc_html__("Backup creation failed.", "rnmoji") .
+            esc_html__('Backup creation failed.', 'rnmoji') .
             '</p></div>';
     }
 }
@@ -141,14 +141,14 @@ function upload_backup(): void {
     $file = $_FILES['backup_file'] ?? null;
     if (!$file || $file['error'] !== UPLOAD_ERR_OK) {
         echo '<div class="error"><p>' .
-            esc_html__("Error uploading backup file.", "rnmoji") .
+            esc_html__('Error uploading backup file.', 'rnmoji') .
             '</p></div>';
         return;
     }
 
     if (pathinfo($file['name'], PATHINFO_EXTENSION) !== 'zip') {
         echo '<div class="error"><p>' .
-            esc_html__("Uploaded file is not a ZIP archive.", "rnmoji") .
+            esc_html__('Uploaded file is not a ZIP archive.', 'rnmoji') .
             '</p></div>';
         return;
     }
@@ -156,14 +156,14 @@ function upload_backup(): void {
     $zip = new ZipArchive();
     if ($zip->open($file['tmp_name']) !== true) {
         echo '<div class="error"><p>' .
-            esc_html__("Failed to open ZIP archive.", "rnmoji") .
+            esc_html__('Failed to open ZIP archive.', 'rnmoji') .
             '</p></div>';
         return;
     }
 
     if (!$zip->extractTo(RNMOJI_UPLOAD_DIR)) {
         echo '<div class="error"><p>' .
-            esc_html__("Failed to extract backup files.", "rnmoji") .
+            esc_html__('Failed to extract backup files.', 'rnmoji') .
             '</p></div>';
         $zip->close();
         return;
@@ -172,7 +172,7 @@ function upload_backup(): void {
     $zip->close();
 
     echo '<div class="updated"><p>' .
-        esc_html__("Backup uploaded and extracted successfully.", "rnmoji") .
+        esc_html__('Backup uploaded and extracted successfully.', 'rnmoji') .
         '</p></div>';
 }
 
@@ -187,7 +187,7 @@ function rename_emoji(): void {
 
     if (!preg_match('/^[A-Za-z0-9_]{2,}$/', $new)) {
         echo '<div class="error"><p>' .
-            esc_html__("Emoji name must be at least 2 characters and contain only letters, numbers, and underscores.", "rnmoji") .
+            esc_html__('Emoji name must be at least 2 characters and contain only letters, numbers, and underscores.', 'rnmoji') .
             '</p></div>';
         return;
     }
@@ -197,25 +197,25 @@ function rename_emoji(): void {
 
     if (!file_exists($old_path)) {
         echo '<div class="error"><p>' .
-            esc_html__("Original emoji file does not exist.", "rnmoji") .
+            esc_html__('Original emoji file does not exist.', 'rnmoji') .
             '</p></div>';
         return;
     }
 
     if (file_exists($new_path)) {
         echo '<div class="error"><p>' .
-            esc_html__("New emoji name already exists.", "rnmoji") .
+            esc_html__('New emoji name already exists.', 'rnmoji') .
             '</p></div>';
         return;
     }
 
     if (rename($old_path, $new_path)) {
         echo '<div class="updated"><p>' .
-            esc_html__("Emoji renamed successfully.", "rnmoji") .
+            esc_html__('Emoji renamed successfully.', 'rnmoji') .
             '</p></div>';
     } else {
         echo '<div class="error"><p>' .
-            esc_html__("Failed to rename emoji.", "rnmoji") .
+            esc_html__('Failed to rename emoji.', 'rnmoji') .
             '</p></div>';
     }
 }
@@ -228,7 +228,7 @@ function rename_emoji(): void {
 function rnmoji_delete_emoji(): void {
     if (!current_user_can('manage_options') || !isset($_GET['file'])) {
         echo '<div class="error"><p>' .
-            esc_html__("Unauthorized access.", "rnmoji") .
+            esc_html__('Unauthorized access.', 'rnmoji') .
             '</p></div>';
         return;
     }
@@ -245,7 +245,7 @@ function rnmoji_delete_emoji(): void {
     }
 
     echo '<div class="error"><p>' .
-        esc_html__("File not found.", "rnmoji") .
+        esc_html__('File not found.', 'rnmoji') .
         '</p></div>';
 }
 add_action('admin_post_delete_emoji', 'rnmoji_delete_emoji');
