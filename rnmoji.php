@@ -23,7 +23,10 @@ define('RNMOJI_UPLOAD_DIR', plugin_dir_path(__FILE__) . 'assets/emoji/');
 define('RNMOJI_UPLOAD_URL', plugin_dir_url(__FILE__) . 'assets/emoji/');
 
 require_once __DIR__ . '/includes/shortcode-replace.php';
+require_once __DIR__ . '/includes/delete-emoji.php';
 require_once __DIR__ . '/templates/settings-page.php';
+
+register_activation_hook(__FILE__, 'rnmoji_create_assets_folder');
 
 /**
  * Create assets/emoji directory on plugin activation.
@@ -36,7 +39,11 @@ function rnmoji_create_assets_folder(): void
         wp_mkdir_p(RNMOJI_UPLOAD_DIR);
     }
 }
-register_activation_hook(__FILE__, 'rnmoji_create_assets_folder');
+
+add_filter(
+    'plugin_action_links_' . plugin_basename(__FILE__),
+    'rnmoji_plugin_action_links'
+);
 
 /**
  * Add settings link to the plugin actions list on Plugins page.
@@ -56,10 +63,8 @@ function rnmoji_plugin_action_links(array $links): array
     array_unshift($links, $settings_link);
     return $links;
 }
-add_filter(
-    'plugin_action_links_' . plugin_basename(__FILE__),
-    'rnmoji_plugin_action_links'
-);
+
+add_action('admin_menu', 'rnmoji_add_plugin_settings_page');
 
 /**
  * Register the plugin settings page in WordPress admin.
@@ -77,4 +82,5 @@ function rnmoji_add_plugin_settings_page(): void
         'rnmoji_settings_page'
     );
 }
-add_action('admin_menu', 'rnmoji_add_plugin_settings_page');
+
+add_action('admin_post_delete_emoji', 'rnmoji_delete_emoji');
