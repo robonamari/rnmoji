@@ -22,6 +22,7 @@ if (!defined('ABSPATH')) {
 define('RNMOJI_UPLOAD_DIR', plugin_dir_path(__FILE__) . 'assets/emoji/');
 define('RNMOJI_UPLOAD_URL', plugin_dir_url(__FILE__) . 'assets/emoji/');
 
+require_once __DIR__ . '/includes/shortcode-replace.php';
 require_once __DIR__ . '/templates/settings-page.php';
 
 /**
