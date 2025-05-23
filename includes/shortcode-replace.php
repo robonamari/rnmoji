@@ -29,7 +29,7 @@ add_filter('comment_text', function (string $comment_text): string {
         $comment_text = str_replace(
             ":$name:",
             sprintf(
-                '<img src="%s" alt=":%s:" title=":%s:" width="20" height="20" loading="lazy" decoding="async" />',
+                '<img src="%s" alt="%s" title="%s" width="20" height="20" loading="lazy" decoding="async" />',
                 $url,
                 $name,
                 $name
