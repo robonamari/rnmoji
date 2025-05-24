@@ -1,0 +1,165 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
+msgstr "Voeg pasgemaakte emojis by WordPress-kommentaarafdelings met rnmoji, wat gebruikers toelaat om hulself uit te druk met lekker en unieke emoji-reaksies."
+
+msgid "Settings"
+msgstr "Instellings"
+
+msgid "rnmoji Settings"
+msgstr "rnmoji-instellings"
+
+msgid "rnmoji"
+msgstr "rnmoji"
+
+msgid "Unable to delete existing backup file."
+msgstr "Kan bestaande rugsteunlêer nie uitvee nie."
+
+msgid "Failed to create backup ZIP file."
+msgstr "Het nie daarin geslaag om 'n rugsteun ZIP-lêer te skep nie."
+
+msgid "No emoji files found to back up."
+msgstr "Geen emoji-lêers gevind om rugsteun te maak nie."
+
+msgid "Backup created successfully."
+msgstr "Rugsteun suksesvol geskep."
+
+msgid "Download Backup"
+msgstr "Laai rugsteun af"
+
+msgid "Backup creation failed."
+msgstr "Rugsteenskaping het misluk."
+
+msgid "Unauthorized access."
+msgstr "Onbevoegde toegang."
+
+msgid "File not found."
+msgstr "Lêer nie gevind nie."
+
+msgid "Emoji name must be at least 2 characters and contain only letters, numbers, and underscores."
+msgstr "Emoji-naam moet minstens 2 karakters hê en slegs letters, syfers en onderstrepings bevat."
+
+msgid "Original emoji file does not exist."
+msgstr "Oorspronklike emoji-lêer bestaan nie."
+
+msgid "New emoji name already exists."
+msgstr "Nuwe emoji-naam bestaan reeds."
+
+msgid "Emoji renamed successfully."
+msgstr "Emoji suksesvol hernoem."
+
+msgid "Failed to rename emoji."
+msgstr "Kon emoji nie hernoem nie."
+
+msgid "Error uploading backup file."
+msgstr "Fout tydens die oplaa van rugsteunlêer."
+
+msgid "Uploaded file is not a ZIP archive."
+msgstr "Opgehoopte lêer is nie 'n ZIP-argief nie."
+
+msgid "Failed to open ZIP archive."
+msgstr "Kon ZIP-argief nie oopmaak nie."
+
+msgid "Failed to extract backup files."
+msgstr "Kon rugsteunlêers nie uitpak nie."
+
+msgid "Backup uploaded and extracted successfully."
+msgstr "Rugsteun suksesvol opgelaai en uitgepak."
+
+msgid "You have reached the maximum limit of 2000 emojis. Upload not allowed."
+msgstr "Jy het die maksimum limiet van 2000 emojis bereik. Oplaaien nie toegelaat nie."
+
+msgid "Error uploading file."
+msgstr "Fout tydens lêeroplaai."
+
+msgid "File size must be 256 KB or less."
+msgstr "Lêergrootte moet 256 KB of minder wees."
+
+msgid "Emoji name must be at least 2 characters and only contain letters, numbers, and underscores."
+msgstr "Emoji-naam moet minstens 2 karakters hê en slegs letters, syfers en onderstrepings bevat."
+
+msgid "File name is already taken. Emoji not uploaded."
+msgstr "Lêernaam is reeds geneem. Emoji nie opgelaai nie."
+
+msgid "Error loading image."
+msgstr "Fout tydens laai van prent."
+
+msgid "Error resizing image."
+msgstr "Fout tydens grootte-verandering van prent."
+
+msgid "Error converting image to WebP."
+msgstr "Fout tydens omskakeling van prent na WebP."
+
+msgid "Emoji uploaded and resized successfully."
+msgstr "Emoji suksesvol opgelaai en van grootte verander."
+
+msgid "Plugin Settings"
+msgstr "Inprop-instellings"
+
+msgid "Upload New Emoji"
+msgstr "Laai nuwe emoji op"
+
+msgid "You can upload up to 2000 custom emojis."
+msgstr "Jy kan tot 2000 pasgemaakte emojis oplaai."
+
+msgid "Upload Requirements:"
+msgstr "Oplaai-vereistes:"
+
+msgid "File Type:"
+msgstr "Lêertipe:"
+
+msgid "Max file size: 256 KB"
+msgstr "Maksimum lêergrootte: 256 KB"
+
+msgid "Recommended dimensions: 62 x 62 pixels"
+msgstr "Aanbevole afmetings: 62 x 62 pixels"
+
+msgid "Naming: Emoji names must be at least 2 characters long and can only contain alphanumeric characters and underscores"
+msgstr "Naamgewing: Emoji- name moet minstens 2 karakters lank wees en slegs alfanumeriese karakters en onderstrepings bevat"
+
+msgid "Upload Emoji"
+msgstr "Laai emoji op"
+
+msgid "Backup"
+msgstr "Rugsteun"
+
+msgid "Create Backup"
+msgstr "Skep rugsteun"
+
+msgid "Upload Backup"
+msgstr "Laai rugsteun op"
+
+msgid "Emojis - %s slots available"
+msgstr "Emojis - %s gleuwe beskikbaar"
+
+msgid "Search Emojis"
+msgstr "Soek emojis"
+
+msgid "List of uploaded emojis with actions"
+msgstr "Lys van opgelaaide emojis met aksies"
+
+msgid "Emoji"
+msgstr "Emoji"
+
+msgid "Emoji Name"
+msgstr "Emoji-naam"
+
+msgid "Actions"
+msgstr "Aksies"
+
+msgid "At least 2 chars, alphanumeric and underscores only"
+msgstr "Minstens 2 karakters, slegs alfanumeries en onderstrepings"
+
+msgid "Rename emoji name"
+msgstr "Hernoem emoji-naam"
+
+msgid "Rename"
+msgstr "Hernoem"
+
+msgid "Are you sure you want to delete this emoji?"
+msgstr "Is jy seker jy wil hierdie emoji verwyder?"
+
+msgid "Delete"
+msgstr "Verwyder"

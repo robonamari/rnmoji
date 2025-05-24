@@ -1,0 +1,165 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
+msgstr "Shto emoji të personalizuara në seksionet e komenteve të WordPress me rnmoji, duke lejuar përdoruesit të shprehen me reagime emoji argëtuese dhe unike."
+
+msgid "Settings"
+msgstr "Cilësimet"
+
+msgid "rnmoji Settings"
+msgstr "Cilësimet e rnmoji"
+
+msgid "rnmoji"
+msgstr "rnmoji"
+
+msgid "Unable to delete existing backup file."
+msgstr "Nuk mund të fshihet skedari ekzistues i kopjes rezervë."
+
+msgid "Failed to create backup ZIP file."
+msgstr "Dështoi krijimi i skedarit ZIP të kopjes rezervë."
+
+msgid "No emoji files found to back up."
+msgstr "Nuk u gjetën skedarë emoji për t'u kopjuar."
+
+msgid "Backup created successfully."
+msgstr "Kopja rezervë u krijua me sukses."
+
+msgid "Download Backup"
+msgstr "Shkarko kopjen rezervë"
+
+msgid "Backup creation failed."
+msgstr "Krijimi i kopjes rezervë dështoi."
+
+msgid "Unauthorized access."
+msgstr "Qasje e paautorizuar."
+
+msgid "File not found."
+msgstr "Skedari nuk u gjet."
+
+msgid "Emoji name must be at least 2 characters and contain only letters, numbers, and underscores."
+msgstr "Emri i emoji duhet të ketë të paktën 2 karaktere dhe të përmbajë vetëm shkronja, numra dhe nënvizime."
+
+msgid "Original emoji file does not exist."
+msgstr "Skedari origjinal i emoji nuk ekziston."
+
+msgid "New emoji name already exists."
+msgstr "Emri i ri i emoji ekziston tashmë."
+
+msgid "Emoji renamed successfully."
+msgstr "Emoji u riemërua me sukses."
+
+msgid "Failed to rename emoji."
+msgstr "Dështoi riemërimi i emoji-t."
+
+msgid "Error uploading backup file."
+msgstr "Gabim gjatë ngarkimit të skedarit të kopjes rezervë."
+
+msgid "Uploaded file is not a ZIP archive."
+msgstr "Skedari i ngarkuar nuk është një arkiv ZIP."
+
+msgid "Failed to open ZIP archive."
+msgstr "Dështoi hapja e arkivit ZIP."
+
+msgid "Failed to extract backup files."
+msgstr "Dështoi nxjerrja e skedarëve të kopjes rezervë."
+
+msgid "Backup uploaded and extracted successfully."
+msgstr "Kopja rezervë u ngarkua dhe u nxorr me sukses."
+
+msgid "You have reached the maximum limit of 2000 emojis. Upload not allowed."
+msgstr "Keni arritur kufirin maksimal prej 2000 emojis. Ngarkimi nuk lejohet."
+
+msgid "Error uploading file."
+msgstr "Gabim gjatë ngarkimit të skedarit."
+
+msgid "File size must be 256 KB or less."
+msgstr "Madhësia e skedarit duhet të jetë 256 KB ose më pak."
+
+msgid "Emoji name must be at least 2 characters and only contain letters, numbers, and underscores."
+msgstr "Emri i emoji duhet të ketë të paktën 2 karaktere dhe të përmbajë vetëm shkronja, numra dhe nënvizime."
+
+msgid "File name is already taken. Emoji not uploaded."
+msgstr "Emri i skedarit është përdorur tashmë. Emoji nuk u ngarkua."
+
+msgid "Error loading image."
+msgstr "Gabim gjatë ngarkimit të imazhit."
+
+msgid "Error resizing image."
+msgstr "Gabim gjatë ndryshimit të madhësisë së imazhit."
+
+msgid "Error converting image to WebP."
+msgstr "Gabim gjatë konvertimit të imazhit në WebP."
+
+msgid "Emoji uploaded and resized successfully."
+msgstr "Emoji u ngarkua dhe madhësia u ndryshua me sukses."
+
+msgid "Plugin Settings"
+msgstr "Cilësimet e shtojcës"
+
+msgid "Upload New Emoji"
+msgstr "Ngarko emoji të re"
+
+msgid "You can upload up to 2000 custom emojis."
+msgstr "Mund të ngarkoni deri në 2000 emojis të personalizuar."
+
+msgid "Upload Requirements:"
+msgstr "Kërkesat për ngarkim:"
+
+msgid "File Type:"
+msgstr "Lloji i skedarit:"
+
+msgid "Max file size: 256 KB"
+msgstr "Madhësia maksimale e skedarit: 256 KB"
+
+msgid "Recommended dimensions: 62 x 62 pixels"
+msgstr "Dimensionet e rekomanduara: 62 x 62 pikselë"
+
+msgid "Naming: Emoji names must be at least 2 characters long and can only contain alphanumeric characters and underscores"
+msgstr "Emërtimi: Emrat e emojis duhet të jenë të paktën 2 karaktere dhe mund të përmbajnë vetëm karaktere alfanumerike dhe nënvizime"
+
+msgid "Upload Emoji"
+msgstr "Ngarko emoji"
+
+msgid "Backup"
+msgstr "Kopje rezervë"
+
+msgid "Create Backup"
+msgstr "Krijo kopje rezervë"
+
+msgid "Upload Backup"
+msgstr "Ngarko kopje rezervë"
+
+msgid "Emojis - %s slots available"
+msgstr "Emojis - %s vende të lira"
+
+msgid "Search Emojis"
+msgstr "Kërko emojis"
+
+msgid "List of uploaded emojis with actions"
+msgstr "Lista e emojis të ngarkuara me veprime"
+
+msgid "Emoji"
+msgstr "Emoji"
+
+msgid "Emoji Name"
+msgstr "Emri i emoji"
+
+msgid "Actions"
+msgstr "Veprime"
+
+msgid "At least 2 chars, alphanumeric and underscores only"
+msgstr "Të paktën 2 karaktere, vetëm alfanumerikë dhe nënvizime"
+
+msgid "Rename emoji name"
+msgstr "Riemërto emrin e emoji-t"
+
+msgid "Rename"
+msgstr "Riemërto"
+
+msgid "Are you sure you want to delete this emoji?"
+msgstr "A jeni i sigurt që doni ta fshini këtë emoji?"
+
+msgid "Delete"
+msgstr "Fshi"
