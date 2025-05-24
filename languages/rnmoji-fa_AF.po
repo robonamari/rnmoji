@@ -1,0 +1,165 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
+msgstr "ایموجی‌های دلخواه را به بخش دیدگاه‌های وردپرس با rnmoji اضافه کنید تا کاربران بتوانند خود را با واکنش‌های جالب و منحصربه‌فرد بیان کنند."
+
+msgid "Settings"
+msgstr "تنظیمات"
+
+msgid "rnmoji Settings"
+msgstr "تنظیمات rnmoji"
+
+msgid "rnmoji"
+msgstr "rnmoji"
+
+msgid "Unable to delete existing backup file."
+msgstr "قادر به حذف فایل پشتیبان موجود نیست."
+
+msgid "Failed to create backup ZIP file."
+msgstr "ساخت فایل پشتیبان ZIP ناکام ماند."
+
+msgid "No emoji files found to back up."
+msgstr "هیچ فایل ایموجی برای پشتیبان‌گیری یافت نشد."
+
+msgid "Backup created successfully."
+msgstr "پشتیبان‌گیری موفقانه انجام شد."
+
+msgid "Download Backup"
+msgstr "دانلود پشتیبان"
+
+msgid "Backup creation failed."
+msgstr "ایجاد پشتیبان ناکام ماند."
+
+msgid "Unauthorized access."
+msgstr "دسترسی غیرمجاز."
+
+msgid "File not found."
+msgstr "فایل پیدا نشد."
+
+msgid "Emoji name must be at least 2 characters and contain only letters, numbers, and underscores."
+msgstr "نام ایموجی باید حداقل ۲ حرف باشد و فقط شامل حروف، ارقام و زیرخط (_) باشد."
+
+msgid "Original emoji file does not exist."
+msgstr "فایل اصلی ایموجی وجود ندارد."
+
+msgid "New emoji name already exists."
+msgstr "نام جدید ایموجی قبلاً موجود است."
+
+msgid "Emoji renamed successfully."
+msgstr "نام ایموجی با موفقیت تغییر یافت."
+
+msgid "Failed to rename emoji."
+msgstr "تغییر نام ایموجی ناکام ماند."
+
+msgid "Error uploading backup file."
+msgstr "خطا در آپلود فایل پشتیبان."
+
+msgid "Uploaded file is not a ZIP archive."
+msgstr "فایل آپلود شده یک آرشیف ZIP نیست."
+
+msgid "Failed to open ZIP archive."
+msgstr "باز کردن آرشیف ZIP ناکام ماند."
+
+msgid "Failed to extract backup files."
+msgstr "استخراج فایل‌های پشتیبان ناکام ماند."
+
+msgid "Backup uploaded and extracted successfully."
+msgstr "پشتیبان با موفقیت آپلود و استخراج شد."
+
+msgid "You have reached the maximum limit of 2000 emojis. Upload not allowed."
+msgstr "شما به حداکثر حد ۲۰۰۰ ایموجی رسیده‌اید. آپلود مجاز نیست."
+
+msgid "Error uploading file."
+msgstr "خطا در آپلود فایل."
+
+msgid "File size must be 256 KB or less."
+msgstr "اندازه فایل باید ۲۵۶ کیلوبایت یا کمتر باشد."
+
+msgid "Emoji name must be at least 2 characters and only contain letters, numbers, and underscores."
+msgstr "نام ایموجی باید حداقل ۲ حرف باشد و فقط شامل حروف، ارقام و زیرخط (_) باشد."
+
+msgid "File name is already taken. Emoji not uploaded."
+msgstr "این نام فایل قبلاً استفاده شده است. ایموجی آپلود نشد."
+
+msgid "Error loading image."
+msgstr "خطا در بارگذاری تصویر."
+
+msgid "Error resizing image."
+msgstr "خطا در تغییر اندازه تصویر."
+
+msgid "Error converting image to WebP."
+msgstr "خطا در تبدیل تصویر به WebP."
+
+msgid "Emoji uploaded and resized successfully."
+msgstr "ایموجی با موفقیت آپلود و تغییر اندازه داده شد."
+
+msgid "Plugin Settings"
+msgstr "تنظیمات افزونه"
+
+msgid "Upload New Emoji"
+msgstr "آپلود ایموجی جدید"
+
+msgid "You can upload up to 2000 custom emojis."
+msgstr "شما می‌توانید تا ۲۰۰۰ ایموجی دلخواه آپلود کنید."
+
+msgid "Upload Requirements:"
+msgstr "شرایط آپلود:"
+
+msgid "File Type:"
+msgstr "نوع فایل:"
+
+msgid "Max file size: 256 KB"
+msgstr "حداکثر اندازه فایل: ۲۵۶ کیلوبایت"
+
+msgid "Recommended dimensions: 62 x 62 pixels"
+msgstr "ابعاد پیشنهادی: ۶۲ در ۶۲ پیکسل"
+
+msgid "Naming: Emoji names must be at least 2 characters long and can only contain alphanumeric characters and underscores"
+msgstr "نام‌گذاری: نام‌های ایموجی باید حداقل ۲ حرف داشته باشند و فقط شامل کاراکترهای الفبایی-عددی و زیرخط (_) باشند"
+
+msgid "Upload Emoji"
+msgstr "آپلود ایموجی"
+
+msgid "Backup"
+msgstr "پشتیبان‌گیری"
+
+msgid "Create Backup"
+msgstr "ایجاد پشتیبان"
+
+msgid "Upload Backup"
+msgstr "آپلود پشتیبان"
+
+msgid "Emojis - %s slots available"
+msgstr "ایموجی‌ها - %s جای خالی باقی مانده"
+
+msgid "Search Emojis"
+msgstr "جستجوی ایموجی‌ها"
+
+msgid "List of uploaded emojis with actions"
+msgstr "لیست ایموجی‌های آپلود شده با گزینه‌ها"
+
+msgid "Emoji"
+msgstr "ایموجی"
+
+msgid "Emoji Name"
+msgstr "نام ایموجی"
+
+msgid "Actions"
+msgstr "عملیات"
+
+msgid "At least 2 chars, alphanumeric and underscores only"
+msgstr "حداقل ۲ حرف، فقط حروف، ارقام و زیرخط"
+
+msgid "Rename emoji name"
+msgstr "تغییر نام ایموجی"
+
+msgid "Rename"
+msgstr "تغییر نام"
+
+msgid "Are you sure you want to delete this emoji?"
+msgstr "آیا مطمئن هستید که می‌خواهید این ایموجی را حذف کنید؟"
+
+msgid "Delete"
+msgstr "حذف"
