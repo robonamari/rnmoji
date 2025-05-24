@@ -1,11 +1,6 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . '/../includes/backup-emoji.php';
-require_once __DIR__ . '/../includes/rename-emoji.php';
-require_once __DIR__ . '/../includes/upload-backup.php';
-require_once __DIR__ . '/../includes/upload-emoji.php';
-
 /**
  * Display the settings page for the rnmoji plugin.
  *
@@ -17,14 +12,20 @@ function rnmoji_settings_page(): void
 {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST['upload_emoji'], $_FILES['emoji_file']['name'])) {
+            require_once __DIR__ . '/../includes/upload-emoji.php';
             upload_emoji();
         }
+
         if (isset($_POST['backup_emoji'])) {
+            require_once __DIR__ . '/../includes/backup-emoji.php';
             backup_emoji();
         }
+
         if (isset($_POST['upload_backup'], $_FILES['backup_file']['name'])) {
+            require_once __DIR__ . '/../includes/upload-backup.php';
             upload_backup();
         }
+
         if (
             isset(
                 $_POST['rename_emoji'],
@@ -32,6 +33,7 @@ function rnmoji_settings_page(): void
                 $_POST['old_emoji']
             )
         ) {
+            require_once __DIR__ . '/../includes/rename-emoji.php';
             rename_emoji();
         }
     }
@@ -43,7 +45,7 @@ function rnmoji_settings_page(): void
 
     $current_count = count($emoji_files);
     $available_slots = $max_slots - $current_count;
-    ?>
+?>
 
     <div class="wrap">
         <h1><?= esc_html__('Plugin Settings', 'rnmoji') ?></h1>
