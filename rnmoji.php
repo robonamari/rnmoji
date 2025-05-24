@@ -6,6 +6,7 @@
  * Version:           1.5.0
  * Requires PHP:      8.1
  * Requires at least: 6.8
+ * Tested up to:      6.8
  * Author:            robonamari
  * Author URI:        https://robonamari.com
  * License:           MIT
@@ -22,9 +23,9 @@ if (!defined('ABSPATH')) {
 define('RNMOJI_UPLOAD_DIR', plugin_dir_path(__FILE__) . 'assets/emoji/');
 define('RNMOJI_UPLOAD_URL', plugin_dir_url(__FILE__) . 'assets/emoji/');
 
-require_once __DIR__ . '/includes/shortcode-replace.php';
-require_once __DIR__ . '/includes/delete-emoji.php';
-require_once __DIR__ . '/templates/settings-page.php';
+require_once 'includes/shortcode-replace.php';
+require_once 'includes/delete-emoji.php';
+require_once 'templates/settings-page.php';
 
 register_activation_hook(__FILE__, 'rnmoji_create_assets_folder');
 
