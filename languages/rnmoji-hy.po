@@ -1,0 +1,165 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
+msgstr "Ավելացնել հարմարեցված էմոջիներ WordPress մեկնաբանությունների բաժնում rnmoji-ով, թույլ տալով օգտատերերին արտահայտել իրենց զվարճալի և յուրօրինակ էմոջիներով։"
+
+msgid "Settings"
+msgstr "Կարգավորումներ"
+
+msgid "rnmoji Settings"
+msgstr "rnmoji կարգավորումներ"
+
+msgid "rnmoji"
+msgstr "rnmoji"
+
+msgid "Unable to delete existing backup file."
+msgstr "Չի հաջողվում ջնջել գոյություն ունեցող պահուստային ֆայլը։"
+
+msgid "Failed to create backup ZIP file."
+msgstr "Չի հաջողվել ստեղծել պահուստավորման ZIP ֆայլը։"
+
+msgid "No emoji files found to back up."
+msgstr "Պահուստավորման համար էմոջի ֆայլեր չեն գտնվել։"
+
+msgid "Backup created successfully."
+msgstr "Պահուստավորումը հաջողությամբ ստեղծվել է։"
+
+msgid "Download Backup"
+msgstr "Ներբեռնել պահուստավորումը"
+
+msgid "Backup creation failed."
+msgstr "Պահուստավորման ստեղծումը ձախողվեց։"
+
+msgid "Unauthorized access."
+msgstr "Անթույլատրելի մուտք։"
+
+msgid "File not found."
+msgstr "Ֆայլը չի գտնվել։"
+
+msgid "Emoji name must be at least 2 characters and contain only letters, numbers, and underscores."
+msgstr "Էմոջիի անունը պետք է ունենա առնվազն 2 նիշ և պարունակի միայն տառեր, թվեր և ստորակետեր։"
+
+msgid "Original emoji file does not exist."
+msgstr "Նախնական էմոջիի ֆայլը գոյություն չունի։"
+
+msgid "New emoji name already exists."
+msgstr "Նոր էմոջիի անունը արդեն գոյություն ունի։"
+
+msgid "Emoji renamed successfully."
+msgstr "Էմոջին հաջողությամբ վերանվանվել է։"
+
+msgid "Failed to rename emoji."
+msgstr "Չի հաջողվել վերանվանել էմոջին։"
+
+msgid "Error uploading backup file."
+msgstr "Պահուստային ֆայլի վերբեռնման սխալ։"
+
+msgid "Uploaded file is not a ZIP archive."
+msgstr "Վերբեռնված ֆայլը ZIP արխիվ չէ։"
+
+msgid "Failed to open ZIP archive."
+msgstr "Չի հաջողվում բացել ZIP արխիվը։"
+
+msgid "Failed to extract backup files."
+msgstr "Չի հաջողվում դուրս բերել պահուստային ֆայլերը։"
+
+msgid "Backup uploaded and extracted successfully."
+msgstr "Պահուստավորումը հաջողությամբ վերբեռնվել և դուրս է բերվել։"
+
+msgid "You have reached the maximum limit of 2000 emojis. Upload not allowed."
+msgstr "Դուք հասել եք 2000 էմոջիի առավելագույն սահմանին։ Վերբեռնումը թույլատրված չէ։"
+
+msgid "Error uploading file."
+msgstr "Ֆայլի վերբեռնումը ձախողվեց։"
+
+msgid "File size must be 256 KB or less."
+msgstr "Ֆայլի չափը պետք է լինի 256 KB կամ փոքր։"
+
+msgid "Emoji name must be at least 2 characters and only contain letters, numbers, and underscores."
+msgstr "Էմոջիի անունը պետք է ունենա առնվազն 2 նիշ և պարունակի միայն տառեր, թվեր և ստորակետեր։"
+
+msgid "File name is already taken. Emoji not uploaded."
+msgstr "Ֆայլի անունը արդեն զբաղված է։ Էմոջին չի վերբեռնվել։"
+
+msgid "Error loading image."
+msgstr "Նկարն ազդարարելու սխալ։"
+
+msgid "Error resizing image."
+msgstr "Նկարին չափափոխելու սխալ։"
+
+msgid "Error converting image to WebP."
+msgstr "Նկարն ավելի WebP ձևաչափի փոխելու սխալ։"
+
+msgid "Emoji uploaded and resized successfully."
+msgstr "Էմոջին հաջողությամբ վերբեռնվել և չափափոխվել է։"
+
+msgid "Plugin Settings"
+msgstr "Պլագինի կարգավորումներ"
+
+msgid "Upload New Emoji"
+msgstr "Վերբեռնել նոր էմոջի"
+
+msgid "You can upload up to 2000 custom emojis."
+msgstr "Դուք կարող եք վերբեռնել մինչև 2000 հարմարեցված էմոջի։"
+
+msgid "Upload Requirements:"
+msgstr "Վերբեռնման պահանջներ՝"
+
+msgid "File Type:"
+msgstr "Ֆայլի տիպը՝"
+
+msgid "Max file size: 256 KB"
+msgstr "Առավելագույն ֆայլի չափը՝ 256 KB"
+
+msgid "Recommended dimensions: 62 x 62 pixels"
+msgstr "Խորհուրդ տրվող չափերը՝ 62 x 62 պիքսել"
+
+msgid "Naming: Emoji names must be at least 2 characters long and can only contain alphanumeric characters and underscores"
+msgstr "Անվանումը՝ Էմոջիի անունները պետք է լինեն առնվազն 2 նիշ և պարունակեն միայն ալֆանման թվային տառեր և ստորակետեր"
+
+msgid "Upload Emoji"
+msgstr "Վերբեռնել էմոջի"
+
+msgid "Backup"
+msgstr "Պահուստավորում"
+
+msgid "Create Backup"
+msgstr "Ստեղծել պահուստավորում"
+
+msgid "Upload Backup"
+msgstr "Վերբեռնել պահուստավորում"
+
+msgid "Emojis - %s slots available"
+msgstr "Էմոջիներ - %s ազատ տեղ"
+
+msgid "Search Emojis"
+msgstr "Որոնել էմոջիներ"
+
+msgid "List of uploaded emojis with actions"
+msgstr "Վերբեռնված էմոջիների ցուցակ գործողություններով"
+
+msgid "Emoji"
+msgstr "Էմոջի"
+
+msgid "Emoji Name"
+msgstr "Էմոջիի անուն"
+
+msgid "Actions"
+msgstr "Գործողություններ"
+
+msgid "At least 2 chars, alphanumeric and underscores only"
+msgstr "Առնվազն 2 նիշ, միայն ալֆանման թվեր և ստորակետեր"
+
+msgid "Rename emoji name"
+msgstr "Վերանվանել էմոջիի անունը"
+
+msgid "Rename"
+msgstr "Վերանվանել"
+
+msgid "Are you sure you want to delete this emoji?"
+msgstr "Համոզվա՞ծ եք, որ ցանկանում եք ջնջել այս էմոջին։"
+
+msgid "Delete"
+msgstr "Ջնջել"
