@@ -13,6 +13,8 @@
 
 ---
 
+<img src="/.github/banner.png" alt="banner">
+
 rnmoji is a WordPress plugin that brings custom emojis to your comment sections, allowing users to express themselves with fun and unique reactions. This lightweight and easily integrated plugin is fully customizable, designed to enhance interaction on your website by adding a creative touch to every comment. Tailor the emoji experience to match your site's style and engage your audience in a playful way.
 
 ## Features
