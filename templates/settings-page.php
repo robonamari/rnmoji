@@ -1,7 +1,10 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . '/../includes/helper-functions.php';
+require_once __DIR__ . '/../includes/backup-emoji.php';
+require_once __DIR__ . '/../includes/rename-emoji.php';
+require_once __DIR__ . '/../includes/upload-backup.php';
+require_once __DIR__ . '/../includes/upload-emoji.php';
 
 /**
  * Display the settings page for the rnmoji plugin.
