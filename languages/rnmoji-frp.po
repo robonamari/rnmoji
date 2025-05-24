@@ -1,0 +1,165 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
+msgstr "Apond des emojis persounâs a les sections de comentâros de WordPress emb rnmoji, permettant a les utilisators de s’exprimar emb des reaccions d’emojis amusan et unic."
+
+msgid "Settings"
+msgstr "Paramètros"
+
+msgid "rnmoji Settings"
+msgstr "Paramètros de rnmoji"
+
+msgid "rnmoji"
+msgstr "rnmoji"
+
+msgid "Unable to delete existing backup file."
+msgstr "Impossiblo de suprimar lo fichiér de còpia de seguretat existant."
+
+msgid "Failed to create backup ZIP file."
+msgstr "Falha per crear un fichiér ZIP de còpia de seguretat."
+
+msgid "No emoji files found to back up."
+msgstr "Gins de fichiérs d’emojis trovâs per lo còpiar."
+
+msgid "Backup created successfully."
+msgstr "Còpia de seguretat creada amé succès."
+
+msgid "Download Backup"
+msgstr "Telecargâ la còpia de seguretat"
+
+msgid "Backup creation failed."
+msgstr "Fracàs a la creacion de la còpia de seguretat."
+
+msgid "Unauthorized access."
+msgstr "Accès pas autorizâ."
+
+msgid "File not found."
+msgstr "Fichiér pas trovâ."
+
+msgid "Emoji name must be at least 2 characters and contain only letters, numbers, and underscores."
+msgstr "Lo nom d’emojis dèvêt avêr al manco 2 caractèrs et conteni ren que des lettras, nombres et tirets bas."
+
+msgid "Original emoji file does not exist."
+msgstr "Lo fichiér d’emojis originâl existe pas."
+
+msgid "New emoji name already exists."
+msgstr "Lo novèu nom d’emojis exist déjà."
+
+msgid "Emoji renamed successfully."
+msgstr "Emojis renòmâ amé succès."
+
+msgid "Failed to rename emoji."
+msgstr "Fracàs a renòmar l’emojis."
+
+msgid "Error uploading backup file."
+msgstr "Èrror a la tèsca del fichiér de còpia de seguretat."
+
+msgid "Uploaded file is not a ZIP archive."
+msgstr "Lo fichiér tèsât est pas un archîv ZIP."
+
+msgid "Failed to open ZIP archive."
+msgstr "Fracàs a ouvrir l’archîv ZIP."
+
+msgid "Failed to extract backup files."
+msgstr "Fracàs a extrèire los fichiérs de còpia de seguretat."
+
+msgid "Backup uploaded and extracted successfully."
+msgstr "Còpia de seguretat tèsâ et extrèita amé succès."
+
+msgid "You have reached the maximum limit of 2000 emojis. Upload not allowed."
+msgstr "Avés atint lo limit màssimâl de 2000 emojis. La tèsca est pas permessa."
+
+msgid "Error uploading file."
+msgstr "Èrror a la tèsca du fichiér."
+
+msgid "File size must be 256 KB or less."
+msgstr "La talha du fichiér dèvêt èstre de 256 KB o mens."
+
+msgid "Emoji name must be at least 2 characters and only contain letters, numbers, and underscores."
+msgstr "Lo nom d’emojis dèvêt avêr al manco 2 caractèrs et contenir ren que des lettras, nombres et tirets bas."
+
+msgid "File name is already taken. Emoji not uploaded."
+msgstr "Lo nom du fichiér est ja prî. L’emojis est pas tèsâ."
+
+msgid "Error loading image."
+msgstr "Èrror a cargar l’imatge."
+
+msgid "Error resizing image."
+msgstr "Èrror a redimensionar l’imatge."
+
+msgid "Error converting image to WebP."
+msgstr "Èrror a convertir l’imatge en format WebP."
+
+msgid "Emoji uploaded and resized successfully."
+msgstr "Emojis tèsâ et redimensianâ amé succès."
+
+msgid "Plugin Settings"
+msgstr "Paramètros du plugin"
+
+msgid "Upload New Emoji"
+msgstr "Tèscar un novèu emojis"
+
+msgid "You can upload up to 2000 custom emojis."
+msgstr "Podes tèscar jusc’à 2000 emojis persounâs."
+
+msgid "Upload Requirements:"
+msgstr "Requisits de tèsca :"
+
+msgid "File Type:"
+msgstr "Tip de fichiér :"
+
+msgid "Max file size: 256 KB"
+msgstr "Talha màssima du fichiér : 256 KB"
+
+msgid "Recommended dimensions: 62 x 62 pixels"
+msgstr "Dimensiouns recomandâs : 62 x 62 pixels"
+
+msgid "Naming: Emoji names must be at least 2 characters long and can only contain alphanumeric characters and underscores"
+msgstr "Nòmâjo : los noms d’emojis dèvon avêr al manco 2 caractèrs et conteni ren que de caractèrs alfanumérics et tirets bas"
+
+msgid "Upload Emoji"
+msgstr "Tèscar emojis"
+
+msgid "Backup"
+msgstr "Còpia de seguretat"
+
+msgid "Create Backup"
+msgstr "Crear còpia de seguretat"
+
+msgid "Upload Backup"
+msgstr "Tèscar còpia de seguretat"
+
+msgid "Emojis - %s slots available"
+msgstr "Emojis - %s places disponiblas"
+
+msgid "Search Emojis"
+msgstr "Recercar emojis"
+
+msgid "List of uploaded emojis with actions"
+msgstr "Lista des emojis tèsâs emb accions"
+
+msgid "Emoji"
+msgstr "Emoji"
+
+msgid "Emoji Name"
+msgstr "Nom d’emojis"
+
+msgid "Actions"
+msgstr "Accions"
+
+msgid "At least 2 chars, alphanumeric and underscores only"
+msgstr "Al manco 2 caractèrs, alfanumérics et tirets bas solament"
+
+msgid "Rename emoji name"
+msgstr "Renòmar lo nom d’emojis"
+
+msgid "Rename"
+msgstr "Renòmar"
+
+msgid "Are you sure you want to delete this emoji?"
+msgstr "Sés sèr que vòlès suprimar ceti emojis ?"
+
+msgid "Delete"
+msgstr "Suprimir"
