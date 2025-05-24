@@ -131,13 +131,7 @@ msgstr ""
 msgid "Upload Backup"
 msgstr ""
 
-msgid "Upload Backup"
-msgstr ""
-
 msgid "Emojis - %s slots available"
-msgstr ""
-
-msgid "Search Emojis"
 msgstr ""
 
 msgid "Search Emojis"

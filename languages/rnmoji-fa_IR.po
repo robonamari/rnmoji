@@ -131,14 +131,8 @@ msgstr "ایجاد پشتیبان"
 msgid "Upload Backup"
 msgstr "آپلود پشتیبان"
 
-msgid "Upload Backup"
-msgstr "آپلود پشتیبان"
-
 msgid "Emojis - %s slots available"
 msgstr "ایموجی‌ها - %s جایگاه موجود"
-
-msgid "Search Emojis"
-msgstr "جستجوی ایموجی‌ها"
 
 msgid "Search Emojis"
 msgstr "جستجوی ایموجی‌ها"
