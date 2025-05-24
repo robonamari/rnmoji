@@ -199,3 +199,6 @@ msgstr "تغییر نام ایموجی ناموفق بود."
 
 msgid "No emoji files found to back up."
 msgstr "هیچ فایل ایموجی‌ای برای پشتیبان‌گیری پیدا نشد."
+
+msgid "rnmoji Settings"
+msgstr "تنظیمات rnmoji"
