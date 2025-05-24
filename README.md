@@ -32,7 +32,7 @@ rnmoji is a WordPress plugin that brings custom emojis to your comment sections,
 ### 1. Download the Plugin Files
 
 To download the latest version of the plugin, visit the GitHub releases page:
-🔗 [rnmoji - GitHub Releases](https://github.com/robonamari/rnmoji/releases)
+🔗 [GitHub Releases](https://github.com/robonamari/rnmoji/releases)
 
 ### 2. Upload to WordPress and Activate
 

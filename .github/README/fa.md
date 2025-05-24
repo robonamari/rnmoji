@@ -38,7 +38,7 @@
 ### 1. دریافت فایل‌های افزونه
 
 برای دانلود آخرین نسخه افزونه، به صفحه انتشارهای GitHub مراجعه کنید:
-🔗 [rnmoji - GitHub Releases](https://github.com/robonamari/rnmoji/releases)
+🔗 [GitHub Releases](https://github.com/robonamari/rnmoji/releases)
 
 ### 2. آپلود در وردپرس و اجرا
 
