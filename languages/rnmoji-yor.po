@@ -1,0 +1,165 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
+msgstr "Ṣafikun awọn aami ẹrin aṣa si apakan ọrọìwòye WordPress pẹlu rnmoji, kí àwọn onílo lè fi ara wọn hàn pẹ̀lú ìfihàn ayọ àti ìfarasin aláyọ."
+
+msgid "Settings"
+msgstr "Àtúnṣe"
+
+msgid "rnmoji Settings"
+msgstr "Àtúnṣe rnmoji"
+
+msgid "rnmoji"
+msgstr "rnmoji"
+
+msgid "Unable to delete existing backup file."
+msgstr "Ko le pa faili àfikún àfọ̀kànsí tó wà."
+
+msgid "Failed to create backup ZIP file."
+msgstr "Ṣiṣe faili ZIP àfọ̀kànsí kuna."
+
+msgid "No emoji files found to back up."
+msgstr "Kò sí faili emoji kankan láti ṣe àfọ̀kànsí."
+
+msgid "Backup created successfully."
+msgstr "Àfọ̀kànsí ti dáa ṣẹ́."
+
+msgid "Download Backup"
+msgstr "Gba Àfọ̀kànsí"
+
+msgid "Backup creation failed."
+msgstr "Ṣiṣe àfọ̀kànsí kuna."
+
+msgid "Unauthorized access."
+msgstr "Ìwọlé láìfọwọ́sowọ́pọ̀."
+
+msgid "File not found."
+msgstr "A kò rí faili."
+
+msgid "Emoji name must be at least 2 characters and contain only letters, numbers, and underscores."
+msgstr "Orúkọ emoji gbọ́dọ̀ jẹ́ kíkọ tó kere tán 2 lẹ́tà pẹ̀lú àwọn lẹ́tà, nọ́mbà àti àsálẹ̀ nikan."
+
+msgid "Original emoji file does not exist."
+msgstr "Faili emoji gidi kò sí."
+
+msgid "New emoji name already exists."
+msgstr "Orúkọ emoji tuntun ti wà tẹ́lẹ̀."
+
+msgid "Emoji renamed successfully."
+msgstr "Orúkọ emoji ti yí padà ní ìṣeyọrí."
+
+msgid "Failed to rename emoji."
+msgstr "Ṣiṣe àtúnorúkọ emoji kuna."
+
+msgid "Error uploading backup file."
+msgstr "Àṣìṣe nígbà ìkó faili àfọ̀kànsí sórí ẹrọ."
+
+msgid "Uploaded file is not a ZIP archive."
+msgstr "Faili tó kó sórí ẹrọ kì í ṣe àkójọpọ̀ ZIP."
+
+msgid "Failed to open ZIP archive."
+msgstr "Ṣí àkójọpọ̀ ZIP kuna."
+
+msgid "Failed to extract backup files."
+msgstr "Gbigbasilẹ faili àfọ̀kànsí kuna."
+
+msgid "Backup uploaded and extracted successfully."
+msgstr "Àfọ̀kànsí ti kó sórí ẹrọ àti yọ jáde ní ìṣeyọrí."
+
+msgid "You have reached the maximum limit of 2000 emojis. Upload not allowed."
+msgstr "O ti dé àárẹ̀ emoji 2000. Kò sí àyè fifi kun."
+
+msgid "Error uploading file."
+msgstr "Àṣìṣe nígbà fifi faili sórí ẹrọ."
+
+msgid "File size must be 256 KB or less."
+msgstr "Iwọn faili gbọ́dọ̀ jẹ́ 256 KB tàbí kere si."
+
+msgid "Emoji name must be at least 2 characters and only contain letters, numbers, and underscores."
+msgstr "Orúkọ emoji gbọ́dọ̀ jẹ́ lẹ́tà 2 tàbí ju bẹ́ẹ̀ lọ pẹ̀lú lẹ́tà, nọ́mbà àti àsálẹ̀ nìkan."
+
+msgid "File name is already taken. Emoji not uploaded."
+msgstr "Orúkọ faili ti wà. Emoji kò fi kó sórí ẹrọ."
+
+msgid "Error loading image."
+msgstr "Àṣìṣe nígbà ìkó àwòrán."
+
+msgid "Error resizing image."
+msgstr "Àṣìṣe nígbà àtúnṣe iwọn àwòrán."
+
+msgid "Error converting image to WebP."
+msgstr "Àṣìṣe nígbà ìyípadà àwòrán sí WebP."
+
+msgid "Emoji uploaded and resized successfully."
+msgstr "Emoji ti kó sórí ẹrọ àti túnṣe iwọn ní ìṣeyọrí."
+
+msgid "Plugin Settings"
+msgstr "Àtúnṣe Àfikún"
+
+msgid "Upload New Emoji"
+msgstr "Kó Emoji Tuntun Sórí Ẹrọ"
+
+msgid "You can upload up to 2000 custom emojis."
+msgstr "O lè kó tó emoji 2000 sórí ẹrọ."
+
+msgid "Upload Requirements:"
+msgstr "Àwọn Àìmọ̀ran Fifi Kó Sórí Ẹrọ:"
+
+msgid "File Type:"
+msgstr "Iru Faili:"
+
+msgid "Max file size: 256 KB"
+msgstr "Iwọn faili tó pọ̀jù: 256 KB"
+
+msgid "Recommended dimensions: 62 x 62 pixels"
+msgstr "Iwọn tó dáa jùlọ: 62 x 62 píksẹ́lì"
+
+msgid "Naming: Emoji names must be at least 2 characters long and can only contain alphanumeric characters and underscores"
+msgstr "Orúkọ: Orúkọ emoji gbọ́dọ̀ jẹ́ lẹ́tà 2 tàbí ju bẹ́ẹ̀ lọ pẹ̀lú lẹ́tà àti nọ́mbà àti àsálẹ̀ nìkan"
+
+msgid "Upload Emoji"
+msgstr "Fifi Emoji sórí Ẹrọ"
+
+msgid "Backup"
+msgstr "Àfọ̀kànsí"
+
+msgid "Create Backup"
+msgstr "Ṣẹda Àfọ̀kànsí"
+
+msgid "Upload Backup"
+msgstr "Kó Àfọ̀kànsí Sórí Ẹrọ"
+
+msgid "Emojis - %s slots available"
+msgstr "Àwọn emoji - %s àyè tó ṣoṣo"
+
+msgid "Search Emojis"
+msgstr "Wá Emoji"
+
+msgid "List of uploaded emojis with actions"
+msgstr "Àtòkọ emoji tí a kó sórí ẹrọ pẹ̀lú àwọn ìṣe"
+
+msgid "Emoji"
+msgstr "Emoji"
+
+msgid "Emoji Name"
+msgstr "Orúkọ Emoji"
+
+msgid "Actions"
+msgstr "Ìṣe"
+
+msgid "At least 2 chars, alphanumeric and underscores only"
+msgstr "O kere jùlọ lẹ́tà 2, lẹ́tà-nọ́mbà àti àsálẹ̀ nìkan"
+
+msgid "Rename emoji name"
+msgstr "Tún orúkọ emoji ṣe"
+
+msgid "Rename"
+msgstr "Tún Orúkọ Ṣe"
+
+msgid "Are you sure you want to delete this emoji?"
+msgstr "Ṣé o dájú pé o fẹ́ pa emoji yìí?"
+
+msgid "Delete"
+msgstr "Pa"
