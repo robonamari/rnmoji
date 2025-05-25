@@ -24,6 +24,7 @@ jobs:
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "version=$VERSION" >> $GITHUB_OUTPUT
       - name: Check if tag already exists
+        id: check_tag
         run: |
           TAG_NAME="v${{ steps.extract_version.outputs.version }}"
           if git tag -l "$TAG_NAME" | grep -q .; then
@@ -44,6 +45,15 @@ jobs:
           git config user.email "github-actions@github.com"
           git tag "v$VERSION"
           git push origin "v$VERSION"
+      - name: Convert .po to .mo using msgfmt
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gettext
+          for po in languages/*.po; do
+            mo="languages/$(basename "${po%.po}.mo")"
+            msgfmt "$po" -o "$mo"
+            echo "✅ Converted $po → $mo"
+          done
       - name: Prepare release assets
         run: |
           TAG_NAME="v$VERSION"
