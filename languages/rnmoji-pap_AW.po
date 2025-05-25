@@ -1,0 +1,165 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
+msgstr "Adi custom emoji na WordPress komento sekshon ku rnmoji, pa e usuario por expresá nan mes ku divertido i uniko emoji reakshon."
+
+msgid "Settings"
+msgstr "Konfigurashon"
+
+msgid "rnmoji Settings"
+msgstr "Konfigurashon di rnmoji"
+
+msgid "rnmoji"
+msgstr "rnmoji"
+
+msgid "Unable to delete existing backup file."
+msgstr "No por eliminá backup fayo ku ta eksistí."
+
+msgid "Failed to create backup ZIP file."
+msgstr "No a logra hasi backup ZIP fayo."
+
+msgid "No emoji files found to back up."
+msgstr "No a haya ningun fayo di emoji pa backup."
+
+msgid "Backup created successfully."
+msgstr "Backup a krea ku exito."
+
+msgid "Download Backup"
+msgstr "Descarga Backup"
+
+msgid "Backup creation failed."
+msgstr "Kreashon di backup a falla."
+
+msgid "Unauthorized access."
+msgstr "Akses no autorisá."
+
+msgid "File not found."
+msgstr "Fayo no a haya."
+
+msgid "Emoji name must be at least 2 characters and contain only letters, numbers, and underscores."
+msgstr "Nomber di emoji mester tin minimo 2 karakters i solamente letra, numero i underscore."
+
+msgid "Original emoji file does not exist."
+msgstr "Original fayo di emoji no ta eksistí."
+
+msgid "New emoji name already exists."
+msgstr "Nobo nomber di emoji ta eksistí basta."
+
+msgid "Emoji renamed successfully."
+msgstr "Emoji a kambia nomber ku exito."
+
+msgid "Failed to rename emoji."
+msgstr "No a logra kambia nomber di emoji."
+
+msgid "Error uploading backup file."
+msgstr "Error den subi fayo di backup."
+
+msgid "Uploaded file is not a ZIP archive."
+msgstr "Fayo subi no ta un archivo ZIP."
+
+msgid "Failed to open ZIP archive."
+msgstr "No a logra habri archivo ZIP."
+
+msgid "Failed to extract backup files."
+msgstr "No a logra extrak backup fayonan."
+
+msgid "Backup uploaded and extracted successfully."
+msgstr "Backup subi i ekstra ku exito."
+
+msgid "You have reached the maximum limit of 2000 emojis. Upload not allowed."
+msgstr "Bo a yega na e limit maximo di 2000 emoji. Subi no ta permití."
+
+msgid "Error uploading file."
+msgstr "Error den subi fayo."
+
+msgid "File size must be 256 KB or less."
+msgstr "Tamaño di fayo mester ta 256 KB òf menos."
+
+msgid "Emoji name must be at least 2 characters and only contain letters, numbers, and underscores."
+msgstr "Nomber di emoji mester tin minimo 2 karakters i solamente letra, numero i underscore."
+
+msgid "File name is already taken. Emoji not uploaded."
+msgstr "Nomber di fayo ya ta tuma. Emoji no a subi."
+
+msgid "Error loading image."
+msgstr "Error den karga imágen."
+
+msgid "Error resizing image."
+msgstr "Error den cambia tamaño di imágen."
+
+msgid "Error converting image to WebP."
+msgstr "Error den konvertí imágen na WebP."
+
+msgid "Emoji uploaded and resized successfully."
+msgstr "Emoji a subi i a kambia tamaño ku exito."
+
+msgid "Plugin Settings"
+msgstr "Konfigurashon di plugin"
+
+msgid "Upload New Emoji"
+msgstr "Subi Nobo Emoji"
+
+msgid "You can upload up to 2000 custom emojis."
+msgstr "Bo por subi te ku 2000 emoji personalisá."
+
+msgid "Upload Requirements:"
+msgstr "Rekwisito pa subi:"
+
+msgid "File Type:"
+msgstr "Tipo di fayo:"
+
+msgid "Max file size: 256 KB"
+msgstr "Tamaño máximo di fayo: 256 KB"
+
+msgid "Recommended dimensions: 62 x 62 pixels"
+msgstr "Dimenshon rekomendá: 62 x 62 píksel"
+
+msgid "Naming: Emoji names must be at least 2 characters long and can only contain alphanumeric characters and underscores"
+msgstr "Nòmber: Nomber di emoji mester tin minimo 2 karakters i solamente karakters alfanúmeriko i underscore"
+
+msgid "Upload Emoji"
+msgstr "Subi Emoji"
+
+msgid "Backup"
+msgstr "Backup"
+
+msgid "Create Backup"
+msgstr "Hasi Backup"
+
+msgid "Upload Backup"
+msgstr "Subi Backup"
+
+msgid "Emojis - %s slots available"
+msgstr "Emoji - %s lugá disponibel"
+
+msgid "Search Emojis"
+msgstr "Buska Emoji"
+
+msgid "List of uploaded emojis with actions"
+msgstr "Lista di emoji subi ku aksion"
+
+msgid "Emoji"
+msgstr "Emoji"
+
+msgid "Emoji Name"
+msgstr "Nomber di Emoji"
+
+msgid "Actions"
+msgstr "Akshon"
+
+msgid "At least 2 chars, alphanumeric and underscores only"
+msgstr "Minimo 2 karakters, solamente alfanúmeriko i underscore"
+
+msgid "Rename emoji name"
+msgstr "Kambia nomber di emoji"
+
+msgid "Rename"
+msgstr "Kambia nomber"
+
+msgid "Are you sure you want to delete this emoji?"
+msgstr "Bo ta sigur ku bo ke eliminá e emoji aki?"
+
+msgid "Delete"
+msgstr "Eliminá"

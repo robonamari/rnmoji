@@ -1,0 +1,165 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
+msgstr "rnmoji nal WordPress de comment hisay vich custom emojis shamil karo, jo users nu mazedar ate wakhri emoji reactions nal apne jazbaat zahir karan di sahulat dindi hai."
+
+msgid "Settings"
+msgstr "Settings"
+
+msgid "rnmoji Settings"
+msgstr "rnmoji Settings"
+
+msgid "rnmoji"
+msgstr "rnmoji"
+
+msgid "Unable to delete existing backup file."
+msgstr "Mojooda backup file nu delete karan vich nakami."
+
+msgid "Failed to create backup ZIP file."
+msgstr "Backup ZIP file banan vich nakami."
+
+msgid "No emoji files found to back up."
+msgstr "Backup layi koi emoji files nahi mile."
+
+msgid "Backup created successfully."
+msgstr "Backup safalta nal banaya gaya."
+
+msgid "Download Backup"
+msgstr "Backup download karo"
+
+msgid "Backup creation failed."
+msgstr "Backup banan vich nakami."
+
+msgid "Unauthorized access."
+msgstr "Bina ijazat de access."
+
+msgid "File not found."
+msgstr "File nahi mili."
+
+msgid "Emoji name must be at least 2 characters and contain only letters, numbers, and underscores."
+msgstr "Emoji da naam kam to kam 2 characters da hona chahida hai ate sirf akhar, number ate underscores hona chahide ne."
+
+msgid "Original emoji file does not exist."
+msgstr "Original emoji file mojood nahi."
+
+msgid "New emoji name already exists."
+msgstr "Nava emoji naam pehlan hi mojood hai."
+
+msgid "Emoji renamed successfully."
+msgstr "Emoji da naam safalta nal badliya gaya."
+
+msgid "Failed to rename emoji."
+msgstr "Emoji da naam badlan vich nakami."
+
+msgid "Error uploading backup file."
+msgstr "Backup file upload karan vich error."
+
+msgid "Uploaded file is not a ZIP archive."
+msgstr "Upload kita gaya file ZIP archive nahi hai."
+
+msgid "Failed to open ZIP archive."
+msgstr "ZIP archive kholan vich nakami."
+
+msgid "Failed to extract backup files."
+msgstr "Backup files extract karan vich nakami."
+
+msgid "Backup uploaded and extracted successfully."
+msgstr "Backup safalta nal upload ate extract kita gaya."
+
+msgid "You have reached the maximum limit of 2000 emojis. Upload not allowed."
+msgstr "Tuhada emoji di limit 2000 te pohoch chuki hai. Upload allowed nahi."
+
+msgid "Error uploading file."
+msgstr "File upload karan vich error."
+
+msgid "File size must be 256 KB or less."
+msgstr "File da size 256 KB ya is to ghatt hona chahida hai."
+
+msgid "Emoji name must be at least 2 characters and only contain letters, numbers, and underscores."
+msgstr "Emoji da naam kam to kam 2 characters da hona chahida hai ate sirf akhar, number ate underscores hone chahide ne."
+
+msgid "File name is already taken. Emoji not uploaded."
+msgstr "File da naam pehlan hi leya ja chuka hai. Emoji upload nahi hoya."
+
+msgid "Error loading image."
+msgstr "Image load karan vich error."
+
+msgid "Error resizing image."
+msgstr "Image resize karan vich error."
+
+msgid "Error converting image to WebP."
+msgstr "Image nu WebP vich convert karan vich error."
+
+msgid "Emoji uploaded and resized successfully."
+msgstr "Emoji safalta nal upload ate resize kita gaya."
+
+msgid "Plugin Settings"
+msgstr "Plugin Settings"
+
+msgid "Upload New Emoji"
+msgstr "Nava Emoji Upload karo"
+
+msgid "You can upload up to 2000 custom emojis."
+msgstr "Tusi 2000 tak custom emojis upload kar sakde ho."
+
+msgid "Upload Requirements:"
+msgstr "Upload diyan shartan:"
+
+msgid "File Type:"
+msgstr "File da type:"
+
+msgid "Max file size: 256 KB"
+msgstr "Max file size: 256 KB"
+
+msgid "Recommended dimensions: 62 x 62 pixels"
+msgstr "Sifarsh kiti gai dimensions: 62 x 62 pixels"
+
+msgid "Naming: Emoji names must be at least 2 characters long and can only contain alphanumeric characters and underscores"
+msgstr "Naming: Emoji naam kam to kam 2 characters lamba hona chahida hai ate sirf alphanumeric characters ate underscores hone chahide ne."
+
+msgid "Upload Emoji"
+msgstr "Emoji Upload karo"
+
+msgid "Backup"
+msgstr "Backup"
+
+msgid "Create Backup"
+msgstr "Backup banao"
+
+msgid "Upload Backup"
+msgstr "Backup Upload karo"
+
+msgid "Emojis - %s slots available"
+msgstr "Emojis - %s jagah available"
+
+msgid "Search Emojis"
+msgstr "Emojis labho"
+
+msgid "List of uploaded emojis with actions"
+msgstr "Uploaded emojis di list ate actions"
+
+msgid "Emoji"
+msgstr "Emoji"
+
+msgid "Emoji Name"
+msgstr "Emoji da Naam"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "At least 2 chars, alphanumeric and underscores only"
+msgstr "Kam to kam 2 characters, sirf alphanumeric ate underscores"
+
+msgid "Rename emoji name"
+msgstr "Emoji da naam badlo"
+
+msgid "Rename"
+msgstr "Naam badlo"
+
+msgid "Are you sure you want to delete this emoji?"
+msgstr "Ki tusi yakeen ho ke tusi eh emoji delete karna chaunde ho?"
+
+msgid "Delete"
+msgstr "Delete karo"

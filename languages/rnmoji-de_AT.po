@@ -1,0 +1,165 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
+msgstr "Fügen Sie benutzerdefinierte Emojis zu den WordPress-Kommentaren mit rnmoji hinzu, damit Benutzer sich mit unterhaltsamen und einzigartigen Emoji-Reaktionen ausdrücken können."
+
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "rnmoji Settings"
+msgstr "rnmoji-Einstellungen"
+
+msgid "rnmoji"
+msgstr "rnmoji"
+
+msgid "Unable to delete existing backup file."
+msgstr "Die vorhandene Sicherungsdatei konnte nicht gelöscht werden."
+
+msgid "Failed to create backup ZIP file."
+msgstr "Erstellung der Sicherungs-ZIP-Datei fehlgeschlagen."
+
+msgid "No emoji files found to back up."
+msgstr "Keine Emoji-Dateien zum Sichern gefunden."
+
+msgid "Backup created successfully."
+msgstr "Sicherung erfolgreich erstellt."
+
+msgid "Download Backup"
+msgstr "Sicherung herunterladen"
+
+msgid "Backup creation failed."
+msgstr "Sicherungserstellung fehlgeschlagen."
+
+msgid "Unauthorized access."
+msgstr "Unbefugter Zugriff."
+
+msgid "File not found."
+msgstr "Datei nicht gefunden."
+
+msgid "Emoji name must be at least 2 characters and contain only letters, numbers, and underscores."
+msgstr "Der Emoji-Name muss mindestens 2 Zeichen lang sein und darf nur Buchstaben, Zahlen und Unterstriche enthalten."
+
+msgid "Original emoji file does not exist."
+msgstr "Die ursprüngliche Emoji-Datei existiert nicht."
+
+msgid "New emoji name already exists."
+msgstr "Der neue Emoji-Name existiert bereits."
+
+msgid "Emoji renamed successfully."
+msgstr "Emoji erfolgreich umbenannt."
+
+msgid "Failed to rename emoji."
+msgstr "Emoji konnte nicht umbenannt werden."
+
+msgid "Error uploading backup file."
+msgstr "Fehler beim Hochladen der Sicherungsdatei."
+
+msgid "Uploaded file is not a ZIP archive."
+msgstr "Die hochgeladene Datei ist kein ZIP-Archiv."
+
+msgid "Failed to open ZIP archive."
+msgstr "ZIP-Archiv konnte nicht geöffnet werden."
+
+msgid "Failed to extract backup files."
+msgstr "Sicherungsdateien konnten nicht extrahiert werden."
+
+msgid "Backup uploaded and extracted successfully."
+msgstr "Sicherung erfolgreich hochgeladen und extrahiert."
+
+msgid "You have reached the maximum limit of 2000 emojis. Upload not allowed."
+msgstr "Sie haben das maximale Limit von 2000 Emojis erreicht. Hochladen nicht erlaubt."
+
+msgid "Error uploading file."
+msgstr "Fehler beim Hochladen der Datei."
+
+msgid "File size must be 256 KB or less."
+msgstr "Die Dateigröße muss 256 KB oder weniger betragen."
+
+msgid "Emoji name must be at least 2 characters and only contain letters, numbers, and underscores."
+msgstr "Der Emoji-Name muss mindestens 2 Zeichen lang sein und darf nur Buchstaben, Zahlen und Unterstriche enthalten."
+
+msgid "File name is already taken. Emoji not uploaded."
+msgstr "Dateiname ist bereits vergeben. Emoji wurde nicht hochgeladen."
+
+msgid "Error loading image."
+msgstr "Fehler beim Laden des Bildes."
+
+msgid "Error resizing image."
+msgstr "Fehler beim Ändern der Bildgröße."
+
+msgid "Error converting image to WebP."
+msgstr "Fehler beim Konvertieren des Bildes in WebP."
+
+msgid "Emoji uploaded and resized successfully."
+msgstr "Emoji erfolgreich hochgeladen und in der Größe angepasst."
+
+msgid "Plugin Settings"
+msgstr "Plugin-Einstellungen"
+
+msgid "Upload New Emoji"
+msgstr "Neues Emoji hochladen"
+
+msgid "You can upload up to 2000 custom emojis."
+msgstr "Sie können bis zu 2000 benutzerdefinierte Emojis hochladen."
+
+msgid "Upload Requirements:"
+msgstr "Upload-Anforderungen:"
+
+msgid "File Type:"
+msgstr "Dateityp:"
+
+msgid "Max file size: 256 KB"
+msgstr "Maximale Dateigröße: 256 KB"
+
+msgid "Recommended dimensions: 62 x 62 pixels"
+msgstr "Empfohlene Abmessungen: 62 x 62 Pixel"
+
+msgid "Naming: Emoji names must be at least 2 characters long and can only contain alphanumeric characters and underscores"
+msgstr "Benennung: Emoji-Namen müssen mindestens 2 Zeichen lang sein und dürfen nur alphanumerische Zeichen und Unterstriche enthalten"
+
+msgid "Upload Emoji"
+msgstr "Emoji hochladen"
+
+msgid "Backup"
+msgstr "Sicherung"
+
+msgid "Create Backup"
+msgstr "Sicherung erstellen"
+
+msgid "Upload Backup"
+msgstr "Sicherung hochladen"
+
+msgid "Emojis - %s slots available"
+msgstr "Emojis – %s Plätze verfügbar"
+
+msgid "Search Emojis"
+msgstr "Emojis suchen"
+
+msgid "List of uploaded emojis with actions"
+msgstr "Liste der hochgeladenen Emojis mit Aktionen"
+
+msgid "Emoji"
+msgstr "Emoji"
+
+msgid "Emoji Name"
+msgstr "Emoji-Name"
+
+msgid "Actions"
+msgstr "Aktionen"
+
+msgid "At least 2 chars, alphanumeric and underscores only"
+msgstr "Mindestens 2 Zeichen, nur alphanumerisch und Unterstriche"
+
+msgid "Rename emoji name"
+msgstr "Emoji-Namen umbenennen"
+
+msgid "Rename"
+msgstr "Umbenennen"
+
+msgid "Are you sure you want to delete this emoji?"
+msgstr "Sind Sie sicher, dass Sie dieses Emoji löschen möchten?"
+
+msgid "Delete"
+msgstr "Löschen"
