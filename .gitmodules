@@ -1,0 +1,3 @@
+[submodule "Potifyx"]
+	path = Potifyx
+	url = https://github.com/robonamari/Potifyx.git
