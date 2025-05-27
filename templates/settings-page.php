@@ -12,17 +12,17 @@ function rnmoji_settings_page(): void
 {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST['upload_emoji'], $_FILES['emoji_file']['name'])) {
-            require_once __DIR__ . '/../includes/upload-emoji.php';
+            require_once plugin_dir_path(__DIR__) . 'includes/upload-emoji.php';
             upload_emoji();
         }
 
         if (isset($_POST['backup_emoji'])) {
-            require_once __DIR__ . '/../includes/backup-emoji.php';
+            require_once plugin_dir_path(__DIR__) . 'includes/backup-emoji.php';
             backup_emoji();
         }
 
         if (isset($_POST['upload_backup'], $_FILES['backup_file']['name'])) {
-            require_once __DIR__ . '/../includes/upload-backup.php';
+            require_once plugin_dir_path(__DIR__) . 'includes/upload-backup.php';
             upload_backup();
         }
 
@@ -33,7 +33,7 @@ function rnmoji_settings_page(): void
                 $_POST['old_emoji']
             )
         ) {
-            require_once __DIR__ . '/../includes/rename-emoji.php';
+            require_once plugin_dir_path(__DIR__) . 'includes/rename-emoji.php';
             rename_emoji();
         }
     }
