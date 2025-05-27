@@ -47,7 +47,6 @@ jobs:
           git push origin "v$VERSION"
       - name: Convert .po to .mo using msgfmt
         run: |
-          sudo apt-get update
           sudo apt-get install -y gettext
           for po in languages/*.po; do
             mo="languages/$(basename "${po%.po}.mo")"
