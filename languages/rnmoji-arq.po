@@ -1,6 +1,8 @@
 #
 msgid ""
 msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "Add custom emojis to WordPress comment sections with rnmoji, allowing users to express themselves with fun and unique emoji reactions."
 msgstr "زيد إيموجي خاص في قسم التعليقات ديال WordPress مع rnmoji، باش المستخدمين يعبرو على راسهم بردود ظريفة ومميزة."
