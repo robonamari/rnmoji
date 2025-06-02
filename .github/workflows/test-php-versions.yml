@@ -1,0 +1,29 @@
+name: Test PHP Versions
+
+on:
+  push:
+    paths-ignore:
+      - ".github/**"
+  pull_request:
+    paths-ignore:
+      - ".github/**"
+
+permissions:
+  contents: read
+
+jobs:
+  test-php:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: [8.1, 8.2, 8.3, 8.4]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up PHP ${{ matrix.php-version }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+      - name: Check PHP compatibility by running code
+        run: find . -name "*.php" -exec php -l {} \;
