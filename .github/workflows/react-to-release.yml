@@ -11,8 +11,6 @@ jobs:
   add-reaction:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up GitHub CLI
-        uses: cli/cli-action@v2
       - name: React with Rocket Emoji
         run: |
           gh api \
