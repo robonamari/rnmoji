@@ -1,4 +1,4 @@
-name: 📦Auto Release
+name: Auto Release
 
 on:
   push:
@@ -9,61 +9,57 @@ permissions:
   contents: write
 
 jobs:
-  check_and_release:
+  release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Extract version from rnmoji.php
-        id: extract_version
+        id: extract
         run: |
-          VERSION=$(grep -Eo '\* Version:\s+[0-9.]+' rnmoji.php | awk '{print $3}')
-          echo "Detected version: $VERSION"
+          VERSION=$(grep -Po '\* Version:\s*\K[0-9.]+' rnmoji.php)
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "version=$VERSION" >> $GITHUB_OUTPUT
-      - name: Check if tag already exists
-        id: check_tag
+      - name: Check if tag exists
+        id: tag
         run: |
-          TAG_NAME="v${{ steps.extract_version.outputs.version }}"
-          if git tag -l "$TAG_NAME" | grep -q .; then
-            echo "Tag already exists: $TAG_NAME"
+          TAG="v${{ steps.extract.outputs.version }}"
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
             echo "exists=true" >> $GITHUB_OUTPUT
           else
-            echo "Tag does not exist yet"
             echo "exists=false" >> $GITHUB_OUTPUT
           fi
-      - name: Exit if tag exists
-        if: steps.check_tag.outputs.exists == 'true'
-        run: |
-          echo "This version is already released."
-          exit 0
-      - name: Create Git tag and push
+      - name: Stop if tag exists
+        if: steps.tag.outputs.exists == 'true'
+        run: echo "🔁 Tag already exists. Skipping release."
+      - name: Create and push tag
+        if: steps.tag.outputs.exists != 'true'
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git tag "v$VERSION"
           git push origin "v$VERSION"
-      - name: Convert .po to .mo using msgfmt
+      - name: Convert .po to .mo files
+        if: steps.tag.outputs.exists != 'true'
         run: |
-          sudo apt-get install -y gettext
+          sudo apt-get update && sudo apt-get install -y gettext
           for po in languages/*.po; do
-            mo="languages/$(basename "${po%.po}.mo")"
-            msgfmt "$po" -o "$mo"
-            echo "✅ Converted $po → $mo"
+            msgfmt "$po" -o "${po%.po}.mo"
           done
-      - name: Prepare release assets
+      - name: Build release assets
+        if: steps.tag.outputs.exists != 'true'
         run: |
-          TAG_NAME="v$VERSION"
-          echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
-          zip -r "rnmoji.zip" . -x ".github/*" ".git/*" "README.md" "languages/*.po"
-          tar --exclude=.github --exclude=.git --exclude=README.md --exclude=languages/*.po --exclude="rnmoji.zip" --ignore-failed-read -czf "rnmoji-${TAG_NAME}.tar.gz" .
-      - name: Upload Release
+          FILE="rnmoji-v$VERSION"
+          zip -r "$FILE.zip" . -x ".git/*" ".github/*" "README.md" "languages/*.po"
+          tar --exclude='.git' --exclude='.github' --exclude='README.md' --exclude='languages/*.po' -czf "$FILE.tar.gz" .
+      - name: Upload GitHub release
+        if: steps.tag.outputs.exists != 'true'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ env.TAG_NAME }}
-          name: "${{ env.TAG_NAME }}"
+          tag_name: "v${{ env.VERSION }}"
+          name: "v${{ env.VERSION }}"
           files: |
-            rnmoji.zip
-            rnmoji-${{ env.TAG_NAME }}.tar.gz
+            rnmoji-v${{ env.VERSION }}.zip
+            rnmoji-v${{ env.VERSION }}.tar.gz
