@@ -1,0 +1,67 @@
+name: Sync Translations
+
+on:
+  push:
+    paths:
+      - '**/*.php'
+  pull_request:
+    paths:
+      - '**/*.php'
+
+permissions:
+  contents: write
+
+jobs:
+  update-translations:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Check if PHP files changed
+        id: check_php
+        run: |
+          changed_php=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} -- '*.php' || true)
+          echo "changed_php=$changed_php" >> $GITHUB_OUTPUT
+      - name: Exit if no PHP change
+        if: steps.check_php.outputs.changed_php == ''
+        run: |
+          echo "No PHP files changed, skipping."
+          exit 0
+      - name: Save old hash if exists
+        run: |
+          [ -f languages/rnmoji.pot ] && sha256sum languages/rnmoji.pot | cut -d ' ' -f1 > old_pot_hash.txt || echo "" > old_pot_hash.txt
+      - name: Install gettext
+        run: sudo apt-get install -y gettext
+      - name: Generate new .pot file
+        run: |
+          mkdir -p languages
+          find . -name '*.php' | xargs xgettext --from-code=UTF-8 --language=PHP --keyword=__ --keyword=_e --keyword=_x --output=languages/rnmoji.pot --force-po --join-existing
+      - name: Compare .pot hash and update .po files if needed
+        run: |
+          new_hash=$(sha256sum languages/rnmoji.pot | cut -d ' ' -f1)
+          echo "$new_hash" > new_pot_hash.txt
+          old_hash=$(cat old_pot_hash.txt)
+          echo "Old: $old_hash"
+          echo "New: $new_hash"
+          if [ "$old_hash" = "$new_hash" ]; then
+            echo "No update needed."; exit 0
+          fi
+          echo "Updating .po files..."
+          for po in languages/*.po; do
+            msgmerge --update --backup=none "$po" languages/rnmoji.pot
+          done
+          echo "Resetting headers..."
+          reset_header() {
+            awk 'BEGIN{c=0;s=1}/^msgid /{c++; if(c==2)s=0} s==0{print}' "$1" > temp && \
+            echo -e "#\nmsgid \"\"\nmsgstr \"\"\n\"Content-Type: text/plain; charset=UTF-8\"\n\"Content-Transfer-Encoding: 8bit\"\n" | cat - temp > "$1" && rm -f temp
+          }
+          reset_header languages/rnmoji.pot
+          for po in languages/*.po; do reset_header "$po"; done
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add languages/*.pot languages/*.po
+          git diff --cached --quiet && echo "No changes to commit." && exit 0
+          git commit -m "Update translations (.pot/.po files)"
+          git push
