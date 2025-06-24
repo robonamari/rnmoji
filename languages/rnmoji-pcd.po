@@ -137,8 +137,9 @@ msgid ""
 "Naming: Emoji names must be at least 2 characters long and can only contain "
 "alphanumeric characters and underscores"
 msgstr ""
-"Nomination : Les noms d'emojis doivent comporter au moins 2 caractères et ne "
-"contenir que des caractères alphanumériques et des traits de soulignement"
+"Nomination : Les noms d'emojis doivent comporter au moins 2 caractères et "
+"ne contenir que des caractères alphanumériques et des traits de "
+"soulignement"
 
 msgid "Upload Emoji"
 msgstr "Télécharger l'emoji"
@@ -180,6 +181,7 @@ msgstr "Renommer le nom de l'emoji"
 msgid "Rename"
 msgstr "Renommer"
 
+#: templates/settings-page.php:184
 msgid "Are you sure you want to delete this emoji?"
 msgstr "Êtes-vous sûr de vouloir supprimer cet emoji ?"
 
