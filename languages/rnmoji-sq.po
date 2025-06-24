@@ -177,7 +177,6 @@ msgstr "Riemërto emrin e emoji-t"
 msgid "Rename"
 msgstr "Riemërto"
 
-#: templates/settings-page.php:184
 msgid "Are you sure you want to delete this emoji?"
 msgstr "A jeni i sigurt që doni ta fshini këtë emoji?"
 

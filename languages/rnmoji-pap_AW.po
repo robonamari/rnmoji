@@ -176,7 +176,6 @@ msgstr "Kambia nomber di emoji"
 msgid "Rename"
 msgstr "Kambia nomber"
 
-#: templates/settings-page.php:184
 msgid "Are you sure you want to delete this emoji?"
 msgstr "Bo ta sigur ku bo ke eliminá e emoji aki?"
 

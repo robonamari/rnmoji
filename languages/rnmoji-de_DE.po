@@ -179,7 +179,6 @@ msgstr "Emoji-Namen umbenennen"
 msgid "Rename"
 msgstr "Umbenennen"
 
-#: templates/settings-page.php:184
 msgid "Are you sure you want to delete this emoji?"
 msgstr "Sind Sie sicher, dass Sie dieses Emoji löschen möchten?"
 

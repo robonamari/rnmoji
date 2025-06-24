@@ -176,7 +176,6 @@ msgstr "بدل سمية الإيموجي"
 msgid "Rename"
 msgstr "بدل الاسم"
 
-#: templates/settings-page.php:184
 msgid "Are you sure you want to delete this emoji?"
 msgstr "راك متأكد بلي بغيت تمحي هاد الإيموجي؟"
 
