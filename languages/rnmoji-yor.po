@@ -179,7 +179,6 @@ msgstr "Tún orúkọ emoji ṣe"
 msgid "Rename"
 msgstr "Tún Orúkọ Ṣe"
 
-#: templates/settings-page.php:184
 msgid "Are you sure you want to delete this emoji?"
 msgstr "Ṣé o dájú pé o fẹ́ pa emoji yìí?"
 

@@ -175,7 +175,6 @@ msgstr "إعادة تسمية اسم الرمز التعبيري"
 msgid "Rename"
 msgstr "إعادة تسمية"
 
-#: templates/settings-page.php:184
 msgid "Are you sure you want to delete this emoji?"
 msgstr "هل أنت متأكد أنك تريد حذف هذا الرمز التعبيري؟"
 

@@ -170,7 +170,6 @@ msgstr "تغییر نام ایموجی"
 msgid "Rename"
 msgstr "تغییر نام"
 
-#: templates/settings-page.php:184
 msgid "Are you sure you want to delete this emoji?"
 msgstr "مطمئنید می‌خواهید این ایموجی را حذف کنید؟"
 
