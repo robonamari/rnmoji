@@ -177,6 +177,7 @@ msgstr "Emoji da naam badlo"
 msgid "Rename"
 msgstr "Naam badlo"
 
+#: templates/settings-page.php:184
 msgid "Are you sure you want to delete this emoji?"
 msgstr "Ki tusi yakeen ho ke tusi eh emoji delete karna chaunde ho?"
 

@@ -185,6 +185,7 @@ msgstr "Վերանվանել էմոջիի անունը"
 msgid "Rename"
 msgstr "Վերանվանել"
 
+#: templates/settings-page.php:184
 msgid "Are you sure you want to delete this emoji?"
 msgstr "Համոզվա՞ծ եք, որ ցանկանում եք ջնջել այս էմոջին։"
 

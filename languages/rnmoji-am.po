@@ -185,6 +185,7 @@ msgstr "የኢሞጂ ስም ቀይር"
 msgid "Rename"
 msgstr "ቀይር"
 
+#: templates/settings-page.php:184
 msgid "Are you sure you want to delete this emoji?"
 msgstr "እርግጠኛ ነህ እንደዚህ ኢሞጂ ማጥፋት ይፈልጋሉ?"
 

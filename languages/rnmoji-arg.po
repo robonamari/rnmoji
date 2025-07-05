@@ -177,6 +177,7 @@ msgstr "Renombrar nombre d'emoji"
 msgid "Rename"
 msgstr "Renombrar"
 
+#: templates/settings-page.php:184
 msgid "Are you sure you want to delete this emoji?"
 msgstr "Estás seguro de que quieres borrar iste emoji?"
 

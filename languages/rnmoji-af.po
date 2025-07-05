@@ -179,6 +179,7 @@ msgstr "Hernoem emoji-naam"
 msgid "Rename"
 msgstr "Hernoem"
 
+#: templates/settings-page.php:184
 msgid "Are you sure you want to delete this emoji?"
 msgstr "Is jy seker jy wil hierdie emoji verwyder?"
 
