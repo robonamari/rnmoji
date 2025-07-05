@@ -75,7 +75,7 @@ add_action('admin_menu', 'rnmoji_add_plugin_settings_page');
 function rnmoji_add_plugin_settings_page(): void
 {
     add_submenu_page(
-        null, // Hidden from admin menu
+        null,
         esc_html__('rnmoji Settings', 'rnmoji'),
         esc_html__('rnmoji', 'rnmoji'),
         'manage_options',
