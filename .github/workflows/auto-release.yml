@@ -52,8 +52,13 @@ jobs:
         if: steps.tag.outputs.exists != 'true'
         run: |
           FILE="rnmoji-v$VERSION"
-          zip -r "$FILE.zip" . -x ".git/*" ".github/*" "README.md" "languages/*.po"
-          tar --exclude='.git' --exclude='.github' --exclude='README.md' --exclude='languages/*.po' -czf "$FILE.tar.gz" .
+          mkdir build
+          rsync -a --exclude='.git' --exclude='.github' --exclude='README.md' --exclude='languages/*.po' ./ build/
+          cd build
+          zip -r "../$FILE.zip" .
+          tar -czf "../$FILE.tar.gz" .
+          cd ..
+          rm -rf build
       - name: Upload GitHub release
         if: steps.tag.outputs.exists != 'true'
         uses: softprops/action-gh-release@v2
