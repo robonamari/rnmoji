@@ -2,10 +2,10 @@
 
 [**🇺🇸 English**](../../README.md)
 
-![حجم کد](https://img.shields.io/github/languages/code-size/robonamari/rnmoji?style=flat" alt="Code Size)
-![تعداد خطوط](https://tokei.rs/b1/github/robonamari/rnmoji?style=flat" alt="Total lines)
-![نسخه PHP](https://img.shields.io/badge/php-%5E8.1-blue" alt="php Versions)
-![مجوز گیت هاب](https://img.shields.io/github/license/robonamari/rnmoji" alt="GitHub license)
+![حجم کد](https://img.shields.io/github/languages/code-size/robonamari/rnmoji?style=flat)
+![تعداد خطوط](https://tokei.rs/b1/github/robonamari/rnmoji?style=flat)
+![نسخه PHP](https://img.shields.io/badge/php-%5E8.1-blue)
+![مجوز گیت هاب](https://img.shields.io/github/license/robonamari/rnmoji)
 
 ---
 
