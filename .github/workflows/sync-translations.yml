@@ -35,7 +35,7 @@ jobs:
       - name: Generate new .pot file
         run: |
           mkdir -p languages
-          find . -name '*.php' | xargs xgettext --from-code=UTF-8 --language=PHP --keyword=__ --keyword=_e --keyword=_x --output=languages/rnmoji.pot --force-po --join-existing
+          find . -name '*.php' | xargs xgettext --from-code=UTF-8 --language=PHP --keyword=__ --keyword=_e --keyword=_x --output=languages/rnmoji.pot --force-po
       - name: Compare .pot hash and update .po files if needed
         run: |
           new_hash=$(sha256sum languages/rnmoji.pot | cut -d ' ' -f1)
