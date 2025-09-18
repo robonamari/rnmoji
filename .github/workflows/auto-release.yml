@@ -15,56 +15,40 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
-          fetch-depth: 0
-      - name: Extract version from rnmoji.php
-        id: extract
-        run: |
-          VERSION=$(grep -Po '\* Version:\s*\K[0-9.]+' rnmoji.php)
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          fetch-depth: 1
+      - name: Extract version
+        run: echo "VERSION=$(grep -Po '\* Version:\s*\K[0-9.]+' rnmoji.php)" >> $GITHUB_ENV
       - name: Check if tag exists
-        id: tag
         run: |
-          TAG="v${{ steps.extract.outputs.version }}"
-          if git rev-parse "$TAG" >/dev/null 2>&1; then
-            echo "exists=true" >> $GITHUB_OUTPUT
-          else
-            echo "exists=false" >> $GITHUB_OUTPUT
+          if git rev-parse "v${{ env.VERSION }}" >/dev/null 2>&1; then
+            echo "🔁 Tag already exists. Skipping release."
+            exit 0
           fi
-      - name: Stop if tag exists
-        if: steps.tag.outputs.exists == 'true'
-        run: echo "🔁 Tag already exists. Skipping release."
-      - name: Create and push tag
-        if: steps.tag.outputs.exists != 'true'
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git tag "v$VERSION"
-          git push origin "v$VERSION"
       - name: Convert .po to .mo files
-        if: steps.tag.outputs.exists != 'true'
         run: |
           sudo apt-get install -y gettext
-          for po in languages/*.po; do
+          find languages -name "*.po" | while read -r po; do
             msgfmt "$po" -o "${po%.po}.mo"
           done
       - name: Build release assets
-        if: steps.tag.outputs.exists != 'true'
         run: |
-          FILE="rnmoji-v$VERSION"
-          mkdir build
-          rsync -a --exclude='.git' --exclude='.github' --exclude='README.md' --exclude='languages/*.po' ./ build/
-          cd build
-          zip -r "../$FILE.zip" .
-          tar -czf "../$FILE.tar.gz" .
-          cd ..
-          rm -rf build
+          mkdir -p dist
+          FILENAME="rnmoji-v$VERSION"
+          zip -rq "dist/$FILENAME.zip" . -x ".git/*" ".github/*" "README.md" ".gitignore" "dist/*"
+          tar --exclude='.git' --exclude='.github' --exclude='README.md' \
+              --exclude='.gitignore' --exclude='dist/*' \
+              -czf "dist/$FILENAME.tar.gz" .
+      - name: Create and push tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag "v$VERSION"
+          git push origin "v$VERSION"
       - name: Upload GitHub release
-        if: steps.tag.outputs.exists != 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: "v${{ env.VERSION }}"
           name: "v${{ env.VERSION }}"
           files: |
-            rnmoji-v${{ env.VERSION }}.zip
-            rnmoji-v${{ env.VERSION }}.tar.gz
+            dist/rnmoji-v${{ env.VERSION }}.zip
+            dist/rnmoji-v${{ env.VERSION }}.tar.gz
