@@ -34,9 +34,9 @@ jobs:
         run: |
           mkdir -p dist
           FILENAME="rnmoji-v$VERSION"
-          zip -rq "dist/$FILENAME.zip" . -x ".git/*" ".github/*" "README.md" ".gitignore" "dist/*"
+          zip -rq "dist/$FILENAME.zip" . -x ".git/*" ".github/*" "README.md" ".gitignore" "dist/*" "languages/**/*.po"
           tar --exclude='.git' --exclude='.github' --exclude='README.md' \
-              --exclude='.gitignore' --exclude='dist/*' \
+              --exclude='.gitignore' --exclude='dist/*' --exclude='languages/**/*.po' \
               -czf "dist/$FILENAME.tar.gz" .
       - name: Create and push tag
         run: |
