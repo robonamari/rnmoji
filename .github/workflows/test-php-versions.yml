@@ -2,11 +2,11 @@ name: Test PHP Versions
 
 on:
   push:
-    paths-ignore:
-      - ".github/**"
+    paths:
+      - "**.php"
   pull_request:
-    paths-ignore:
-      - ".github/**"
+    paths:
+      - "**.php"
 
 permissions:
   contents: read
@@ -25,5 +25,5 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-version }}
-      - name: Check PHP compatibility by running code
+      - name: Check PHP syntax
         run: find . -name "*.php" -exec php -l {} \;
